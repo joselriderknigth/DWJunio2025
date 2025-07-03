@@ -1,0 +1,24 @@
+*{
+  margin : 0;
+  padding : 0;
+  border : 0;
+  box-sizing : border-box;
+}
+
+.padre{
+  margin : 200px;
+  padding : 200px;
+  border : 1px solid #0000;
+  border-top: 2px dotted #0000;
+  background-color : aqua;
+  outline: 5px dotted #0000;
+}
+.hijo{
+  /*margin : 20% 10%;
+  width: 80%;
+  height : 60%;*/
+  margin : 200px;
+  padding : 200px;
+  border : 1px solid #0000;
+  background-color : chocolate;
+}

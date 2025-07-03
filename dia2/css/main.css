@@ -1,0 +1,24 @@
+.red{
+    color:blue;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+tr, th, td{
+
+    width: 200px;
+    padding: 15px;
+}
+
+.mydiv:nth-child(1){
+    background-color: aquamarine;
+}
+
+.mydiv:nth-child(2){
+    background-color: rgb(57, 120, 99);
+}
+
+.mydiv:nth-child(3){
+    background-color: rgb(199, 243, 193);
+}
