@@ -45,9 +45,9 @@
 .ej2 div:nth-child(3){
   background-color: rgb(118,255, 248);
 }
-.ej2.ej2-1 div:nth-child(2){
+.ej2-1 div:nth-child(2){
   display: none;
 }
-.ej2.ej2-2 div {
+.ej2-2 div {
   display: inline-block;
 }
