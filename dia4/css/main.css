@@ -5,7 +5,7 @@
   box-sizing : border-box;
 }
 
-.padre{
+/* .padre{
   margin : 200px;
   padding : 200px;
   border : 1px solid #0000;
@@ -17,11 +17,11 @@
   /*margin : 20% 10%;
   width: 80%;
   height : 60%;*/
-  margin : 200px;
+/*   margin : 200px;
   padding : 200px;
   border : 1px solid #0000;
   background-color : chocolate;
-}
+} */
 
 .ej1 div{
     background-color: red;
@@ -50,4 +50,51 @@
 }
 .ej2-2 div {
   display: inline-block;
+} */
+.ej3 header{
+  background-color: aquamarine;
+  height: 75px;
+}
+.ej3 ul{
+   display: inline;
+  list-style: none;
+  padding-top: 28px;
+  padding-left: 28px;
+  position: absolute;
+  top: 28px;
+  right: 20px;
+}
+.ej3 li{
+  display: inline;
+}
+.ej3 li a{
+  cursor: pointer;
+}
+.ej3 li a:hover{
+  color: red;
+}
+.ej3 nav{
+  display: inline;
+
+}
+.ej3 header img{
+  display: inline;
+    height: 100%;
+}
+.ej3 main{
+   min-height: calc(100vh - 125px);
+   text-align: center;
+}
+.ej3 main img{
+  width: 50vw;
+}
+.ej3 main img{
+    width: 50%;
+}
+
+.ej3 footer{
+  padding-top: 15px;
+  background-color: aquamarine;
+  height: 50px;
+  text-align: center;
 }
