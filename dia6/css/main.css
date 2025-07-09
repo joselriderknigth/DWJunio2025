@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: red;
+}
+
+
+header {
+  display: flex;
+  font-family: "Dancing Script", cursive;
+  background-color: aquamarine;
+  height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+}
+
+header li {
+  display: flex;
+}
+
+header img {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 125px);
+  text-align: center;
+  padding: 25px 10vw;
+}
+.texto-grande {
+  font-size: 24px;
+}
+
+.texto-mediano {
+  font-size: 18px;
+}
+
+.ej1 main img {
+  width: 10vw;
+  display: inline;
+    height: 10vw;
+}
+
+.ej2 main img {
+  display: block;
+    height: 50%;
+}
+
+.ej3 main img {
+  display: inline;
+    height: 25%;
+}
+
+.imagen-centro {
+  width: 50%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+ tr, th, td{
+  justify-content: space-evenly;
+    width: 30vw;
+    padding: 30px;
+   background-attachment: fixed; 
+}
+
+
+.mydiv:nth-child(1){
+    background-color: red;
+}
+
+.mydiv:nth-child(2){
+    background-color: rgb(57, 120, 99);
+}
+
+.mydiv2:nth-child(1){
+    background-color: blueviolet;
+}
+
+button{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+footer {
+  display: flex;
+   font-family: "Dancing Script", cursive;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  background-color: aquamarine;
+  height: 50px;
+}
