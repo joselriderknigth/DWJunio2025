@@ -7,11 +7,16 @@
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: blue;
 }
 
 a:hover {
   color: red;
 }
+/* a:visited{
+  color:darkgray
+} */
 
 
 header {
@@ -45,6 +50,7 @@ main {
   text-align: center;
   padding: 25px 10vw;
 }
+
 .texto-grande {
   font-size: 24px;
 }
@@ -56,18 +62,26 @@ main {
 .ej1 main img {
   width: 10vw;
   display: inline;
-    height: 10vw;
+  height: 10vw;
 }
 
 .ej2 main img {
   display: block;
-    height: 50%;
+  height: 50%;
 }
 
 .ej3 main img {
   display: inline;
-    height: 25%;
+  height: 25%;
+  border-radius: 40px;
+   transition: all 0.3s ease;
 }
+.ej3 main img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+
 
 .imagen-centro {
   width: 50%;
@@ -77,27 +91,33 @@ main {
   height: auto;
 }
 
- tr, th, td{
+tr,
+th,
+td {
   justify-content: space-evenly;
-    width: 30vw;
-    padding: 30px;
-   background-attachment: fixed; 
+  width: 30vw;
+  padding: 30px;
+  background-attachment: fixed;
 }
 
 
-.mydiv:nth-child(1){
-    background-color: red;
+.mydiv:nth-child(1) {
+  background-color: red;
 }
 
-.mydiv:nth-child(2){
-    background-color: rgb(57, 120, 99);
+.mydiv:nth-child(2) {
+  background-color: rgb(57, 120, 99);
 }
 
-.mydiv2:nth-child(1){
-    background-color: blueviolet;
+.mydiv2:nth-child(1) {
+  background-color: blueviolet;
 }
 
-button{
+.figurec {
+  border-radius: 10px;
+}
+
+button {
   background-color: black;
   color: white;
   border: none;
@@ -109,7 +129,7 @@ button{
 
 footer {
   display: flex;
-   font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive;
   justify-content: space-evenly;
   padding-top: 15px;
   background-color: aquamarine;
