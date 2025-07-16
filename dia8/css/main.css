@@ -42,12 +42,12 @@ header {
   height: 75px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 3px 75px;
 }
 
 header ul {
   display: flex;
-  gap: 10px;
+  gap: 37px;
 }
 
 header li {
@@ -254,11 +254,92 @@ video {
   width: 60%;
 }
 
+  .contacto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .contacto__titulo {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .contacto__formulario {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contacto__campo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contacto__label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contacto__input,
+    .contacto__textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .contacto__textarea {
+      resize: vertical;
+      min-height: 80px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .contacto__mapa {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contacto__mapa:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .contacto__whatsapp {
+      color: green;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .contacto__whatsapp:hover {
+      text-decoration: underline;
+    }
+
+
+
 footer {
   display: flex;
   font-family: "Dancing Script", cursive;
   justify-content: space-evenly;
-  padding-top: 15px;
-  background-color: aquamarine;
+  padding-top: 16px;
+  background-color: rgba(127, 255, 212, 0.493);
   height: 50px;
 }

@@ -38,12 +38,39 @@
     </header>
     <!--  contenido main -->
     <main>
-        Contactos
+        
+        <h1 class="contacto__titulo">Contáctanos</h1>
 
-        <p class="texto-mediano">
-            A continuacion formas de contacto - developing
-        </p>
-            <img class="imagen-centro" src="images/underconstruccion.png" />
+        <div class="contacto__campo">
+            <label for="email" class="contacto__label">Correo electrónico</label>
+            <input type="email" id="email" class="contacto__input" required>
+        </div>
+
+        <div class="contacto__campo">
+            <label for="telefono" class="contacto__label">Número de celular</label>
+            <input type="tel" id="telefono" class="contacto__input" pattern="[0-9]{10}" placeholder="0987654321"
+                required>
+            <a id="wa-link" class="contacto__whatsapp" target="_blank">Chatear por WhatsApp</a>
+        </div>
+
+        <div class="contacto__campo">
+            <label for="mensaje" class="contacto__label">Mensaje</label>
+            <textarea id="mensaje" class="contacto__textarea" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+
+        <div class="contacto__campo">
+            <label for="direccion" class="contacto__label">Dirección</label>
+            <input type="text" id="direccion" class="contacto__input">
+        </div>
+
+        <div class="contacto__mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0700141988393!2d-76.88079338523873!3d-0.08579883548975224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d3e0c9c7ffcd1f%3A0xe8cf52d1db0de0c1!2sLago%20Agrio%2C%20Sucumb%C3%ADos%2C%20Ecuador!5e0!3m2!1ses-419!2sus!4v1627904938279!5m2!1ses-419!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
 
     </main>
 

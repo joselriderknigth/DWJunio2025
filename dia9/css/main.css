@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* --- actividades 1
 html{
   font-size: 10px;
 }
@@ -39,4 +40,58 @@ align-items: center;
 background-color: #397dd6;
 box-shadow: 0px 0px .2em .1em #fff;
 text-shadow: 0px 0px .1em #000;
+} */
+
+/* actividades preguntas y respuestas*/
+
+/* .main__principal{
+  width : 100vw;
+  height: 100vh;
+  background-color: aqua;
+  container-type: size;
 }
+
+.secundario{
+  width: 75%;
+  height: 75%;
+  background-color: tomato;
+}
+
+@container (width >700px){
+  .secundario{
+    width: 25%;
+    height: 25%;
+    background-color: thistle;
+  }
+} */
+
+ body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 50vw;
+      height: 50vh;
+      background-color: #ff69b4;
+      border: 4px solid #cc0066;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* 📱 Responsive: cambia color y tamaño en pantallas pequeñas */
+    @media (max-width: 600px) {
+      .box {
+        width: 80vw;
+        height: 40vh;
+        background-color: #ffc0cb;
+        border-color: #99004d;
+      }
+    }

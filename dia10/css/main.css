@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+/*. main__principal{
+  width : 100vw;
+  height: 100vh;
+  background-color: aqua;
+  container-type: size;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: small;
+  transition: all .8s ;
+}
+
+.secundario{
+  width: 75%;
+  height: 75%;
+  background-color: tomato;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: x-large;
+  line-height: 14px;
+}
+
+@container (width >700px){
+  .secundario{
+    width: 25%;
+    height: 25%;
+    background-color: thistle;
+    font-size:x-small;   
+     line-height: 20px; 
+  }
+} */
+
+  /* Definimos un tamaño base para html (sirve para rem) */
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefefe;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 32px; /* px: Fijo, NO cambia con tamaño de pantalla */
+      color: #cc0066;
+    }
+
+    h2 {
+      font-size: 2em; /* em: relativo al elemento padre (aquí body) */
+      color: #9900cc;
+    }
+
+    p {
+      font-size: 1.2rem; /* rem: relativo al tamaño de fuente del <html> */
+      color: #333;
+    }
+
+    button {
+      font-size: 4vw; /* vw: relativo al ancho del viewport */
+      padding: 10px 20px;
+      background: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #cc0066;
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: calc(0px - 100px);
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 6vw;
+      }
+    }
