@@ -4,3 +4,15 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body{display: flex;}
+
+main{
+  width: 70%;
+}
+
+aside{
+width: 30%;
+background-color: aliceblue;
+padding: 20px;
+}
