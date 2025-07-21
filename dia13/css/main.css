@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.inset {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  inset: 10px 10px auto auto;
+  background-color: brown;
+
+}
+
+.scroll-container {
+  
+  height: 600px;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+
+.scroll-area {
+  height: 75vh;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  scroll-snap-align: center;
+}
+
+.scroll-area:nth-of-type(1) {
+  background: #49b293;
+}
+
+.scroll-area:nth-of-type(2) {
+  background: #c94e4b;
+}
+
+.scroll-area:nth-of-type(3) {
+  background: #4cc1be;
+}
+
+.scroll-area:nth-of-type(4) {
+  background: #8360A6;
+}
