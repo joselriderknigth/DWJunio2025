@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body{
+  perspective: 800px;
+}
+
+.transition, .animation1{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition-property: width, trasnform, position, margin ;
+  transition-duration:  2s;
+
+  animation-name: deslizar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+
+.transition:hover{
+  width: 300px;
+  transform: rotateX(90deg);
+  position: relative;
+  margin-left: 50px;
+  margin-top: 50px;
+  background-color: blue;
+}
+
+.animation1{
+  animation-name: deslizar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes deslizar {
+  from {
+    transform: translate(0) rotateZ(0);
+  }
+  to{
+    transform: translate(100px) rotateZ(360deg);
+  }
+
+}
