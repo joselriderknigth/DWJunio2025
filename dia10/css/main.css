@@ -35,64 +35,186 @@
   }
 } */
 
-  /* Definimos un tamaño base para html (sirve para rem) */
-    html {
-      font-size: 16px; /* 1rem = 16px */
-    }
+/*  tamaño base html (para rem) */
+html {
+  font-size: 16px;
+  /* 1rem = 16px */
+}
 
-    body {
-      margin: 0;
-      padding: 40px;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fefefe;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
 
-    h1 {
-      font-size: 32px; /* px: Fijo, NO cambia con tamaño de pantalla */
-      color: #cc0066;
-    }
+h1 {
+  font-size: 32px;
+  /* px: Fijo nivel2-punto3*/
+  color: #cc0066;
 
-    h2 {
-      font-size: 2em; /* em: relativo al elemento padre (aquí body) */
-      color: #9900cc;
-    }
+  /*  font-size: 5vw; */
+  /* Escala ancho nivel2-punto2*/
+  margin-bottom: 20px;
+}
 
-    p {
-      font-size: 1.2rem; /* rem: relativo al tamaño de fuente del <html> */
-      color: #333;
-    }
+h2 {
+  /* font-size: 2em; */
+  /* em: relativo a padre (body) */
 
-    button {
-      font-size: 4vw; /* vw: relativo al ancho del viewport */
-      padding: 10px 20px;
-      background: #ff69b4;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+  font-size: 2vh;
+  /* Escala altura nivel2-punto2*/
+  color: #16a085;
+  margin-bottom: 30px;
+}
 
-    button:hover {
-      background: #cc0066;
-    }
+p {
+  /* rem: relativo al tamaño de fuente <html> */
 
-    /* Media query para pantallas pequeñas */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: calc(0px - 100px);
-      }
+  /* ----nivel2-punto1-- */
+  max-width: 60vh;
+  /* Ancho máximo depende - altura */
+  line-height: 1.6em;
+  /* Espaciado  líneas  legibilidad */
+  font-size: 1rem;
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-      h2 {
-        font-size: 1.5em;
-      }
+}
 
-      p {
-        font-size: 1rem;
-      }
+button {
+  font-size: 4vw;
+  /* vw: relativo al ancho del viewport */
+  padding: 10px 20px;
+  background: #ff69b4;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-      button {
-        font-size: 6vw;
-      }
-    }
+button:hover {
+  background: #cc0066;
+}
+
+/* Media query - pantallas pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    /* font-size: calc(0px - 100px); */
+    /*--- nivel1-punro4 --- */
+    font-size: calc(2vw + 10px);
+    text-align: center;
+    color: darkblue;
+    /* ----- */
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 6vw;
+  }
+}
+
+/* Nivel 1 - punto 2 */
+
+.contenedor {
+  /* width: 20px; */
+  font-size: 20px;
+  /* tamaño base div */
+  border: 2px solid steelblue;
+  padding: 10px;
+  margin: 20px;
+}
+
+.contenedor p {
+  font-size: 2em;
+  /* relativo font-size contenedor */
+  color: darkred;
+}
+
+/*  nivel 1- punto3 */
+
+.caja {
+  width: 50vw;
+  /* 50% de ventana */
+  padding: calc(2rem + 5px);
+  background-color: lightblue;
+  border: 3px solid navy;
+  margin: 20px auto;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "MiFuentePersonalizada";
+  src: url("fonts/MiFuente.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.h1-nivel3 {
+  font-family: "MiFuentePersonalizada", serif;
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.p-nivel3 {
+  font-family: "MiFuentePersonalizada", sans-serif;
+  font-size: 1.2rem;
+  color: #34495e;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.body-nivel3-2 {
+  font-family: 'Roboto Flex', sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.h1-nivel3-2 {
+  font-size: 3rem;
+  font-weight: 800;
+  /* Peso dinámico */
+  font-stretch: 120%;
+  /* Expansión horizontal */
+  font-style: italic;
+  /* Estilo inclinado */
+  margin-bottom: 20px;
+}
+
+.p-nivel3-2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-stretch: 90%;
+  /* Comprimir la anchura de la fuente */
+  font-style: normal;
+  max-width: 600px;
+
+}
+
+.variaciones-nivel3-2 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-left: 5px solid #3498db;
+  font-variation-settings:
+    "wght" 700,
+    "wdth" 75,
+    "slnt" -10,
+    /* Inclinación */
+    "opsz" 36;
+  /* Optical size */
+}

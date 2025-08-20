@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* 1. Fuente personalizada con @font-face */
+@font-face {
+    font-family: 'RobotoFlexCustom';
+    src: url('https://fonts.gstatic.com/s/robotoflex/v10/NaPecZf3S2dD2K3rYy0hF3pL.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 2vw;
+    font-family: 'RobotoFlexCustom', sans-serif;
+    background: #f8f9fa;
+    line-height: 1.5;
+    overflow-x: hidden;
+    /* -- scroll horizontal -- */
+}
+
+/* 2. responsivo clamp()  */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2vh;
+    transition: font-variation-settings 0.4s ease-in-out;
+}
+
+/* Hover → activa propiedades variables */
+h1:hover {
+    font-variation-settings:
+        "wght" 900,
+        "wdth" 120;
+    color: #2c3e50;
+}
+
+/* 3. Párrafo max-width ch */
+p {
+    max-width: 60ch;
+    line-height: 1.5em;
+    margin: 0 auto 2rem auto;
+    padding: 1em;
+    font-size: 1.1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout fluido */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.box {
+    flex: 1 1 30%;
+    min-width: 200px;
+    max-width: 400px;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+     text-align: center;
+}
+
+/* 5. Media Queries (< 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0.8em;
+    }
+
+    .box {
+        flex: 1 1 100%;
+        font-size: 1.5em;
+        height: 20vh;
+    }
+}
