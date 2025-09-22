@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    p {
+      padding: 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease; /* efecto suave */
+    }
+    .light {
+      color: black;
+      background-color: white;
+    }
+    .dark {
+      color: white;
+      background-color: black;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }

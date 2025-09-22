@@ -1,4 +1,12 @@
-//const textarea = 
+const textarea = document.getElementById('texto1');
+const boton1 = document.getElementById('boton1');
+const parraf = document.getElementById('parrafo');
+
+boton1.addEventListener('click', () => {
+   parraf.innerText = textarea.value;
+});
+
+// -------------------------
 
 const numero1 = document.getElementById('numero1');
 const numero2 = document.getElementById('numero2');

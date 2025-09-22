@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  position: relative;
+  top: 60px;
+  padding: 2px;
+}
+
+.number {
+  /* background-color: rgb(57, 120, 99); */
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* fondo semitransparente */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  /* sombra base */
+  transition: box-shadow 0.3s ease-in;
+  padding: 20px;
+  width: 937px;
+}
