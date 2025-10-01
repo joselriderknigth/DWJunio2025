@@ -21,3 +21,12 @@ const texto = document.getElementById("miTexto");
       }
       esClaro = !esClaro; // alterna el estado
     });
+
+
+        const caja = document.getElementById("miCaja");
+    const boton2 = document.getElementById("btnAnimar");
+
+    boton2.addEventListener("click", () => {
+      // Alterna la clase "animar"
+      caja.classList.toggle("animar");
+    });

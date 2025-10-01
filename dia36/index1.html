@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="=es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dia36</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+</head>
+<body>
+
+     <h1>Sistema de Pestañas Accesibles</h1>
+
+  <!-- Lista de pestañas -->
+  <div class="tablist" role="tablist" aria-label="Ejemplo de pestañas">
+    <button class="tab" role="tab" aria-selected="true" aria-controls="tab1" id="btn1">Inicio</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tab2" id="btn2">Servicios</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tab3" id="btn3">Nosotros</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tab4" id="btn4">Contacto</button>
+  </div>
+
+  <!-- Contenido de pestañas -->
+  <div id="tab1" class="tabpanel active" role="tabpanel" aria-labelledby="btn1">
+    <p>Bienvenido a la sección de Inicio. Aquí encontrarás las últimas novedades.</p>
+  </div>
+  <div id="tab2" class="tabpanel" role="tabpanel" aria-labelledby="btn2">
+    <p>Estos son nuestros Servicios: desarrollo web, aplicaciones móviles y consultoría tecnológica.</p>
+  </div>
+  <div id="tab3" class="tabpanel" role="tabpanel" aria-labelledby="btn3">
+    <p>Sobre Nosotros: somos un equipo apasionado por la tecnología y la educación.</p>
+  </div>
+  <div id="tab4" class="tabpanel" role="tabpanel" aria-labelledby="btn4">
+    <p>Contáctanos en: contacto@ejemplo.com o llama al +123 456 789.</p>
+  </div>
+   
+</body>
+</html>

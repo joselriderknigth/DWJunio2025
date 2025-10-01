@@ -11,3 +11,18 @@
   font-size: large;
 }
 
+
+  #miCaja {
+      width: 150px;
+      height: 150px;
+      background-color: cornflowerblue;
+      margin: 20px auto;
+      border-radius: 10px;
+      transition: transform 1s, background-color 1s;
+    }
+
+    /* Clase que aplica animación */
+    .animar {
+      transform: rotate(180deg) scale(1.2);
+      background-color: tomato;
+    }

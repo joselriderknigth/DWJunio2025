@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.parallax {
+  height: 100vh;
+  /* cada sección ocupa toda la pantalla */
+  background-attachment: fixed;
+  /* clave del parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.parallax.bg1 {
+  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1600&q=80");
+}
+
+.parallax.bg2 {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+}
+
+.contenido {
+  height: 50vh;
+  padding: 40px;
+  background: #f4f4f4;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
