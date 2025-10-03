@@ -2,18 +2,25 @@
 
 const alumno = {
     nombre: "Juan",
+    apelllido: "Alvear",
     edad: 22,
     carrera: "Ingenieria"
 }
 
+console.log(alumno.nombre,
+    alumno.apelllido,
+    alumno.edad,
+    alumno.carrera
+);
+
 //const array1 = {...alumno};
 
-const array21 = [1,2,3];
-const array2 = [4,5,6];
-const array3 = [...array2,...array21];
+const array21 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = [...array2, ...array21];
 console.log(array3);
 
-const parrafo= document.getElementById("parrafo");
+const parrafo = document.getElementById("parrafo");
 parrafo.textContent = - `Nombre: ${alumno.array2} `;
 
 
