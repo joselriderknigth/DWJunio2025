@@ -2,88 +2,107 @@
 <html lang="=es">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Jolu Digital Group</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- preconnetc -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-
-    <link rel='stylesheet' type='text/css' href='css/main.css'>
-    <script src='js/main.js' defer></script>
-
-
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Jolu Digital Group</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' type='text/css' href='css/main.css'>
+  <script src='js/main.js' defer></script>
 </head>
 
+<body>
 
-<body class="body-dos">
-    <!-- headrer code  -->
-    <header>
-        <img src="images/logotrasn2.png">
-        <h4> JOLU GRUPO DIGITAL <span class="red"> Latam</span> </h4>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index1.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="servicios.html">Servicios</a>
-                </li>
-                <li>
-                    <a href="contactos.html">Contactos</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!--  contenido main -->
-    <main>
-        <p class="texto-grande">
-            Grupo Corporativo - Expertos en <span class="blue">Consultoria</span> y Soporte <span class="blue">Tecnologia</span> para Sistemas de <span class="blue">Seguridad</span> en Control de <span class="blue">Acceso</span>  e <span class="blue">Inventarios.</span>
-        </p>
+  <header>
+    <img src="images/logotrasn2.png">
+    <h4> JOLU GRUPO DIGITAL <span class="red"> Latam</span> </h4>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="servicios.html">Servicios</a>
+        </li>
+        <li>
+          <a href="contactos.html">Contactos</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="mydiv">
-            <table>
-                <tr>
-                    <td>
-                        <figure class="figurec">
-                            <img class="ej3-main-img" src="images/PERFIL.PNG" />
-                            <figcaption>Reconocimiento Facial y Acceso de Personal</figcaption>
-                        </figure>
-                    </td>
-                    <td>
-                        <figure class="img-rotate">
-                            <img class="img-rotate" src="images/logotrasn2.png" />
-                            <figcaption>Equipo de Dotacion Tactico y Armamento</figcaption>
-                        </figure>
-                    </td>
+  <div class="top-bar">
+    <input type="text" placeholder="Buscar noticias...">
+    <span class="search-icon">🔍</span>
+  </div>
 
-                    <td>
-                        <figure>
-                            <img class="ej3-main-img" src="images/Directivo.PNG" />
-                            <figcaption>Control y Automatizacion de Inventario.</figcaption>
-                        </figure>
-                    </td>
-                </tr>
-            </table>
 
-           <!--  <p>
-                Lorem ipsum dolor amet consectetur adipisicing elit. Delinite man.
-            </p>
-            <img class="ej3" src="images/danamaria.png"> -->
+  <button class="menu-toggle">☰</button>
+  <!-- Sidebar categorías -->
+  <div class="sidebar" id="sidebar">
+    <span class="pin" id="pin">📌</span>
+    <h3>Novedades</h3>
+    <a href="index1.html">
+      <h3>Catalogos</h3>
+    </a>
+    <a href="index2.html">
+      <h3>Soporte</h3>
+    </a>
+  </div>
+
+ 
+    <div class="carrusel" id="carrusel">
+      <div class="carrusel-contenido" id="carruselContenido">
+        <!-- Noticia 1 -->
+        <div class="carrusel-item">
+          <a href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/#:~:text=Biometr%C3%ADa%20y%20privacidad:%20%C2%BFpuede%20haber,Durante%20cu%C3%A1nto%20tiempo%20se%20conservar%C3%A1n."
+            target="_blank">
+            <div class="imagen" style="background-image: url('images/20-BLOG-OK.png');"></div>
+            <div class="caption"> Biometría: amenazas, riesgos y vulnerabilidades</div>
+            <div class="detalle">La biometría hace referencia a la identificación y autenticación de personas a partir
+              de características físicas o conductuales únicas, como huellas dactilares, reconocimiento facial, iris o
+              voz.</div>
+          </a>
         </div>
+        <!-- Noticia 2 -->
+        <div class="carrusel-item">
+          <a href="https://latam.kaspersky.com/resource-center/definitions/biometrics#:~:text=En%20la%20pr%C3%A1ctica%2C%20la%20seguridad,su%20uso%20en%20tiempo%20real."
+            target="_blank">
+            <div class="imagen" style="background-image: url('images/48-biometrics-q75.webp');"></div>
+            <div class="caption"> ¿Qué es la biometría y cómo se utiliza en la seguridad? - Kaspersky </div>
+            <div class="detalle">La biometría es cada vez más utilizada como una capa avanzada en muchos sistemas de
+              seguridad personales y empresariales.</div>
+          </a>
+        </div>
+        <!-- Noticia 3 -->
+        <div class="carrusel-item">
+          <a href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety#:~:text=Viajes%20e%20inmigraci%C3%B3n:%20racionalizaci%C3%B3n%20de%20los%20procesos&text=El%20sector%20de%20viajes%20e,sean%20m%C3%A1s%20seguros%20y%20eficientes.&text=Aeropuertos%20y%20control%20fronterizo:%20Los,viajeros%20en%20los%20cruces%20fronterizos."
+            target="_blank">
+            <div class="imagen" style="background-image: url('images/BiometricSecurity.webp');"></div>
+            <div class="caption"> Seguridad biométrica: el futuro de la seguridad personal y pública </div>
+            <div class="detalle">En una era en la que la seguridad digital es más crucial que nunca, la seguridad
+              biométrica surge como un faro de esperanza e innovación.</div>
+          </a>
+        </div>
+      </div>
 
-        <button onclick="window.location.href='register.html'">Registrar</button>
-    </main>
+      <!-- Botones -->
+      <button class="carrusel-boton prev" onclick="moverCarrusel(-1)">❮</button>
+      <button class="carrusel-boton next" onclick="moverCarrusel(1)">❯</button>
+    </div>
 
-    <!-- footer code -->
-    <footer>
-        <a>Facebook</a>
-        <a>Instagram</a>
-        <a>Twitter</a>
-        <a>TikTok</a>
-    </footer>
+ <div class="auth-buttons">
+      <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+      <button class="btn-register" onclick="window.location.href='register.html'">Registrarse</button>
+  </div>
+
+
+  <footer class="footer-dos">
+    <a href="https://www.facebook.com/jolu.grupodigit" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/jolu_grupodigital/" target="_blank">Instagram</a>
+    <a href="https://x.com/joluknigth" target="_blank">Twitter</a>
+    <a href="https://www.tiktok.com/@grupodigital_jl?lang=es" target="_blank">TikTok</a>
+  </footer>
 
 </body>
 

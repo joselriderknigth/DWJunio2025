@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Layout general */
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* Header y Footer */
+.header,
+.footer {
+  background-color: #2b3a67;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Contenedor principal del grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  grid-template-rows: repeat(8, minmax(100px, 1fr));
+  gap: 10px;
+    /* grid-auto-flow: column; */
+  /* grid-auto-flow: dense; */
+  /* mejora la distribución */
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Celdas (para ver la estructura del grid) */
+.item {
+  background-color: #5ea3f7;
+  color: white;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-size: cover;
+}
+
+.grid-container  .a {
+  background-image:   url('../images/Masonry-list-img-1-500x500.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .b {
+  background-image:   url('../images/Masonry-list-img-2-500x500.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .f {
+  background-image:   url('../images/Masonry-list-img-6-500x500.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .g {
+  background-image:   url('../images/Masonry-list-img-7-500x500.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .c {
+  grid-row: 1/3;
+  grid-column: 3;
+  background-image:   url('../images/Masonry-list-img-3-500x1000.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .d {
+  background-image:   url('../images/Masonry-list-img-4-500x500.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .h {
+  background-image:   url('../images/Masonry-list-img-8-500x500.jpg');    
+  background-size: cover;
+}
+ 
+.grid-container  .e {
+  grid-row: 1/3;
+  grid-column: 5/7;
+   background-image:   url('../images/Masonry-list-img-5-1000x1000.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .i {
+  grid-row: 3/5;
+  grid-column: 1/3;
+   background-image:   url('../images/Masonry-list-img-9-1000x1000.jpg');    
+  background-size: cover;
+}
+
+.grid-container  .j {
+  background-image:   url('../images/Masonry-list-img-11-500x500.jpg');  
+}
+
+.grid-container  .n {
+  background-image:   url('../images/Masonry-list-img-15-500x500.jpg');  
+}
+
+.grid-container  .k {
+  background-image:   url('../images/Masonry-list-img-10-500x500.jpg');  
+}
+
+.grid-container  .o {
+  background-image:   url('../images/Masonry-list-img-14-500x500.jpg');  
+}
+
+.grid-container  .l {
+  grid-row: 3/5;
+  grid-column: 5;
+  background-image:   url('../images/Masonry-list-img-12-500x1000.jpg'); 
+}
+
+.grid-container  .m {
+  background-image:   url('../images/Masonry-list-img-13-500x500.jpg');  
+}
+
+.grid-container  .p {
+  background-image:   url('../images/Masonry-list-img-16-500x500.jpg');  
+}
+
+.grid-container  .q {
+  grid-row: 5;
+  grid-column: 1/3;
+  background-image:   url('../images/Masonry-list-img-17-1000x500.jpg'); 
+}
+
+.grid-container  .s {
+  background-image:   url('../images/Masonry-list-img-19-500x500.jpg');  
+}
+.grid-container  .r {
+  background-image:   url('../images/Masonry-list-img-18-500x500.jpg');  
+}
+.grid-container  .t {
+  background-image:   url('../images/Masonry-list-img-21-500x500.jpg');  
+}
+.grid-container  .v {
+  background-image:   url('../images/Masonry-list-img-20-500x500.jpg');  
+}
+
+.item:hover {
+  background-color: #004aad;
+  transform: scale(1.05);     
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}

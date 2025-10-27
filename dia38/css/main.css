@@ -4,3 +4,50 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.botones {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+}
+
+#contenido {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 150px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.fade-container {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeEffect 0.6s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

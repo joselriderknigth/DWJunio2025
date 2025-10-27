@@ -6,9 +6,29 @@
     <title>Dia35</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src='js/main.js' defer></script>
 </head>
 <body>
+
+    <h2 style="text-align:center">Galería con SwiperJS</h2>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://picsum.photos/id/1015/800/400" alt="img1"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/id/1025/800/400" alt="img2"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/id/1035/800/400" alt="img3"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/id/1045/800/400" alt="img4"></div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
    
 </body>
 </html>

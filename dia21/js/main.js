@@ -54,5 +54,5 @@ pin.addEventListener("click", () => {
 
 btnRegister.addEventListener("click", () => {
   registerForm.style.display = "block";
-  registerForm.scrollIntoView({ behavior: "smooth" }); // baja al formulario
+  registerForm.scrollIntoView({ behavior: "smooth" }); 
 });
