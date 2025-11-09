@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projecto Final</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- PARALLAX FRONT -->
+    <section class="parallax parallax--front">
+        <header class="header grid-header">
+            <div class="header__logo" aria-label="Logotipo del sitio">LOGO</div>
+            <h1 class="header__title">Mi Sitio Web</h1>
+            <nav class="header__nav" aria-label="Menú principal">
+                <a href="#noticias">Noticias</a>
+                <a href="#comentarios">Comentarios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <div class="main grid-body">
+            <section id="noticias" class="main__carousel">
+                <h2>Noticias Destacadas</h2>
+                <div class="carousel__track">
+                    <div class="grande">
+                        <img src="assets/02.jpg" alt="Imagen 1" class="img">
+                        <img src="assets/03.jpg" alt="Imagen 2" class="img">
+                    </div>
+
+                    <ul class="puntos">
+                        <li class="carousel__btn--next"></li>
+                        <li class="punto"></li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section id="comentarios" class="main__comments">
+                <h2>Comentarios Recientes</h2>
+                <div class="comment">💬 Excelente diseño, muy visual!</div>
+                <div class="comment">🔥 Me encanta el efecto Parallax!</div>
+                <div class="comment">💡 Súper responsivo y limpio.</div>
+            </section>
+        </div>
+
+        <footer class="footer grid-footer">
+            <div class="footer__copy">© 2025 Mi Sitio Web</div>
+            <div class="footer__social">
+                <a href="#" aria-label="Facebook">FB</a> |
+                <a href="#" aria-label="Instagram">IG</a>
+            </div>
+            <div class="footer__msg">Gracias por tu visita</div>
+        </footer>
+    </section>
+
+    <!-- PARALLAX BACK -->
+    <section class="parallax parallax--back">
+        <header class="header grid-header">
+            <div class="header__logo">LOGO</div>
+            <h1 class="header__title">Panel de Productos</h1>
+            <nav class="header__nav">
+                <a href="#">Inicio</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </header>
+
+        <div class="main grid-body grid-body--back">
+            <aside class="aside__menu">
+                <button class="accordion">Electrónicos</button>
+                <div class="panel">Smartphones, Tablets, Accesorios</div>
+                <button class="accordion">Ropa</button>
+                <div class="panel">Camisas, Pantalones, Zapatos</div>
+                <button class="accordion">Deportes</button>
+                <div class="panel">Balones, Pesas, Bicicletas</div>
+            </aside>
+
+            <section class="main__content">
+                <div class="tabs">
+                    <button class="tab active" data-tab="lightbox">Lightbox</button>
+                    <button class="tab" data-tab="landing">Landing</button>
+                </div>
+
+                <div class="tab__content tab__content--lightbox active">
+                    <h2>Galería de Productos</h2>
+                    <div class="gallery">
+                        <img src="https://picsum.photos/300?random=10" alt="Producto A" />
+                        <img src="https://picsum.photos/300?random=11" alt="Producto B" />
+                        <img src="https://picsum.photos/300?random=12" alt="Producto C" />
+                    </div>
+                </div>
+
+                <div class="tab__content tab__content--landing">
+                    <h2>Sección de Servicios</h2>
+                    <p>Contenido de landing dividido en secciones con scroll suave.</p>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer grid-footer">
+            <div class="footer__copy">© 2025 Mi Empresa</div>
+            <div class="footer__social">
+                <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+            </div>
+            <div class="footer__msg">Todos los derechos reservados</div>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>

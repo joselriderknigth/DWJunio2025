@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="=es">
+<html lang="es">
 
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Portal web de noticias sobre tecnologia biometrica de seguridad">
   <title>Jolu Digital Group</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' type='text/css' href='css/main.css'>
-  <script src='js/main.js' defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" media="print">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
   <header>
-    <img src="images/logotrasn2.png">
+    <img src="images/logotrasn2.png" alt="logo">
     <h4> JOLU GRUPO DIGITAL <span class="red"> Latam</span> </h4>
     <nav>
       <ul>
@@ -50,50 +51,53 @@
     </a>
   </div>
 
- 
-    <div class="carrusel" id="carrusel">
-      <div class="carrusel-contenido" id="carruselContenido">
-        <!-- Noticia 1 -->
-        <div class="carrusel-item">
-          <a href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/#:~:text=Biometr%C3%ADa%20y%20privacidad:%20%C2%BFpuede%20haber,Durante%20cu%C3%A1nto%20tiempo%20se%20conservar%C3%A1n."
-            target="_blank">
-            <div class="imagen" style="background-image: url('images/20-BLOG-OK.png');"></div>
-            <div class="caption"> Biometría: amenazas, riesgos y vulnerabilidades</div>
-            <div class="detalle">La biometría hace referencia a la identificación y autenticación de personas a partir
-              de características físicas o conductuales únicas, como huellas dactilares, reconocimiento facial, iris o
-              voz.</div>
-          </a>
-        </div>
-        <!-- Noticia 2 -->
-        <div class="carrusel-item">
-          <a href="https://latam.kaspersky.com/resource-center/definitions/biometrics#:~:text=En%20la%20pr%C3%A1ctica%2C%20la%20seguridad,su%20uso%20en%20tiempo%20real."
-            target="_blank">
-            <div class="imagen" style="background-image: url('images/48-biometrics-q75.webp');"></div>
-            <div class="caption"> ¿Qué es la biometría y cómo se utiliza en la seguridad? - Kaspersky </div>
-            <div class="detalle">La biometría es cada vez más utilizada como una capa avanzada en muchos sistemas de
-              seguridad personales y empresariales.</div>
-          </a>
-        </div>
-        <!-- Noticia 3 -->
-        <div class="carrusel-item">
-          <a href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety#:~:text=Viajes%20e%20inmigraci%C3%B3n:%20racionalizaci%C3%B3n%20de%20los%20procesos&text=El%20sector%20de%20viajes%20e,sean%20m%C3%A1s%20seguros%20y%20eficientes.&text=Aeropuertos%20y%20control%20fronterizo:%20Los,viajeros%20en%20los%20cruces%20fronterizos."
-            target="_blank">
-            <div class="imagen" style="background-image: url('images/BiometricSecurity.webp');"></div>
-            <div class="caption"> Seguridad biométrica: el futuro de la seguridad personal y pública </div>
-            <div class="detalle">En una era en la que la seguridad digital es más crucial que nunca, la seguridad
-              biométrica surge como un faro de esperanza e innovación.</div>
-          </a>
-        </div>
-      </div>
 
-      <!-- Botones -->
-      <button class="carrusel-boton prev" onclick="moverCarrusel(-1)">❮</button>
-      <button class="carrusel-boton next" onclick="moverCarrusel(1)">❯</button>
+  <div class="carrusel" id="carrusel">
+    <div class="carrusel-contenido" id="carruselContenido">
+      <!-- Noticia 1 -->
+      <div class="carrusel-item">
+        <a href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/#:~:text=Biometr%C3%ADa%20y%20privacidad:%20%C2%BFpuede%20haber,Durante%20cu%C3%A1nto%20tiempo%20se%20conservar%C3%A1n."
+          target="_blank">
+          <div class="imagen">
+            <img src="images/20-BLOG-OK.jpg" alt="Imagen destacada del artículo" fetchpriority="high"
+              style="width:34%; height:auto; object-fit:cover;">
+          </div>
+          <div class="caption"> Biometría: amenazas, riesgos y vulnerabilidades</div>
+          <div class="detalle">La biometría hace referencia a la identificación y autenticación de personas a partir
+            de características físicas o conductuales únicas, como huellas dactilares, reconocimiento facial, iris o
+            voz.</div>
+        </a>
+      </div>
+      <!-- Noticia 2 -->
+      <div class="carrusel-item">
+        <a href="https://latam.kaspersky.com/resource-center/definitions/biometrics#:~:text=En%20la%20pr%C3%A1ctica%2C%20la%20seguridad,su%20uso%20en%20tiempo%20real."
+          target="_blank">
+          <div class="imagen" style="background-image: url('images/48-biometrics-q75.jpg');"></div>
+          <div class="caption"> ¿Qué es la biometría y cómo se utiliza en la seguridad? - Kaspersky </div>
+          <div class="detalle">La biometría es cada vez más utilizada como una capa avanzada en muchos sistemas de
+            seguridad personales y empresariales.</div>
+        </a>
+      </div>
+      <!-- Noticia 3 -->
+      <div class="carrusel-item">
+        <a href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety#:~:text=Viajes%20e%20inmigraci%C3%B3n:%20racionalizaci%C3%B3n%20de%20los%20procesos&text=El%20sector%20de%20viajes%20e,sean%20m%C3%A1s%20seguros%20y%20eficientes.&text=Aeropuertos%20y%20control%20fronterizo:%20Los,viajeros%20en%20los%20cruces%20fronterizos."
+          target="_blank">
+          <div class="imagen" style="background-image: url('images/BiometricSecurity.jpg');"></div>
+          <div class="caption"> Seguridad biométrica: el futuro de la seguridad personal y pública </div>
+          <div class="detalle">En una era en la que la seguridad digital es más crucial que nunca, la seguridad
+            biométrica surge como un faro de esperanza e innovación.</div>
+        </a>
+      </div>
     </div>
 
- <div class="auth-buttons">
-      <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
-      <button class="btn-register" onclick="window.location.href='register.html'">Registrarse</button>
+    <!-- Botones -->
+    <button class="carrusel-boton prev" onclick="moverCarrusel(-1)">❮</button>
+    <button class="carrusel-boton next" onclick="moverCarrusel(1)">❯</button>
+  </div>
+
+  <div class="auth-buttons">
+    <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    <button id="btn-register" class="btn-register" onclick="window.location.href='register.html'">Registrarse</button>
   </div>
 
 
