@@ -1,117 +1,131 @@
+/* ----------------------------------------- */
+/* 🌟 Variables globales */
+/* ----------------------------------------- */
+const commentForm = document.querySelector('.comments__form');
+const textArea = document.getElementById('commentText');
+const charCount = document.getElementById('charCount');
+const commentsList = document.getElementById('commentsList');
+const emojiBtn = document.querySelector('.comments__emoji-btn');
+const emojiList = document.querySelector('.comments__emoji-list');
 
-// ===========================
-// Carrusel Avanzado con JS
-// ===========================
-const track = document.querySelector('.carousel__track');
-const btnNext = document.querySelector('.carousel__btn--next');
-const btnPrev = document.querySelector('.carousel__btn--prev');
-const slides = document.querySelectorAll('.carousel__track img');
-const total = slides.length;
+var container = document.getElementById('carrouselr-container');
+var carrouselr = document.getElementById('carrouselr');
+var carrousels = document.getElementsByClassName('carrousel').length;
+var buttons = document.getElementsByClassName('btn');
 
-let index = 0;
-let isTransitioning = false;
+var currentPosition = 0;
+var currentMargin = 0;
+var carrouselsPerPage = 0;
+var carrouselsCount = carrousels - carrouselsPerPage;
+var containerWidth = container.offsetWidth;
+var prevKeyActive = false;
+var nextKeyActive = true;
 
-// Función de actualización visual
-function updateCarousel() {
-  track.style.transition = 'transform 0.5s ease';
-  track.style.transform = `translateX(-${index * 100}%)`;
+window.addEventListener("resize", checkWidth);
+function checkWidth() {
+  containerWidth = container.offsetWidth;
+  setParams(containerWidth);
 }
 
-// Evitar doble clic mientras anima
-track.addEventListener('transitionend', () => {
-  isTransitioning = false;
-});
+function setParams() {
+ carrouselsPerPage = 1;
+  carrouselsCount = carrousels - 1;
 
-// Botón siguiente
-btnNext.addEventListener('click', () => {
-  if (isTransitioning) return;
-  isTransitioning = true;
-  index = (index + 1) % total;
-  updateCarousel();
-});
+  if (currentPosition < 0) currentPosition = 0;
+  if (currentPosition > carrouselsCount) currentPosition = carrouselsCount;
 
-// Botón anterior
-btnPrev.addEventListener('click', () => {
-  if (isTransitioning) return;
-  isTransitioning = true;
-  index = (index - 1 + total) % total;
-  updateCarousel();
-});
+  currentMargin = -currentPosition * 100;
+  carrouselr.style.marginLeft = currentMargin + '%';
 
-// Autoplay automático cada 5 segundos
-let autoplay = setInterval(() => {
-  index = (index + 1) % total;
-  updateCarousel();
-}, 5000);
+  // Botón izquierdo
+  buttons[0].classList.toggle('inactive', currentPosition === 0);
 
-// Pausar autoplay al pasar el mouse
-track.addEventListener('mouseenter', () => clearInterval(autoplay));
-track.addEventListener('mouseleave', () => {
-  autoplay = setInterval(() => {
-    index = (index + 1) % total;
-    updateCarousel();
-  }, 5000);
-});
+  // Botón derecho
+  buttons[1].classList.toggle('inactive', currentPosition === carrouselsCount);
+}
 
-// Lazy loading + fade-in
-slides.forEach(img => {
-  img.loading = 'lazy';
-  img.addEventListener('load', () => img.classList.add('loaded'));
-});
+setParams(container.offsetWidth);
 
+function carrouselRight() {
+  currentPosition--;
+  setParams();
+};
 
-/* ===== Accordion ===== */
-const acc = document.querySelectorAll('.accordion');
-acc.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const panel = btn.nextElementSibling;
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+function carrouselLeft() {
+  currentPosition++;
+  setParams();
+};
+
+(() => {
+
+  /* ----------------------------------------- */
+  /* 🧮 Actualizar contador */
+  /* ----------------------------------------- */
+  const updateCharCountHandler = () => {
+    charCount.textContent = textArea.value.length;
+  };
+
+  textArea.addEventListener('input', updateCharCountHandler);
+
+  /* ----------------------------------------- */
+  /* 😀 Selector de emojis */
+  /* ----------------------------------------- */
+  const toggleEmojiListHandler = () => {
+    const isHidden = emojiList.hasAttribute('hidden');
+    isHidden ? emojiList.removeAttribute('hidden') : emojiList.setAttribute('hidden', true);
+  };
+
+  emojiBtn.addEventListener('click', toggleEmojiListHandler);
+
+  emojiList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('comments__emoji-item')) {
+      textArea.value += event.target.textContent;
+      updateCharCountHandler();
+    }
   });
-});
 
-/* ===== Tabs ===== */
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab__content');
+  /* ----------------------------------------- */
+  /* 💬 Enviar comentario */
+  /* ----------------------------------------- */
+  const submitCommentHandler = (event) => {
+    event.preventDefault();
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    contents.forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.querySelector(`.tab__content--${tab.dataset.tab}`).classList.add('active');
-  });
-});
+    const text = textArea.value.trim();
+    if (!text) return;
 
+    const li = document.createElement('li');
+    li.classList.add('comments__item');
+    li.textContent = text;
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
+    commentsList.prepend(li);
 
-// Cuando CLICK en punto
-    // Saber la posición de ese punto
-    // Aplicar un transform translateX al grande
-    // QUITAR la clase activo de TODOS puntos
-    // AÑADIR la clase activo al punto que hemos hecho CLICK
+    // Guardar en localStorage
+    saveComment(text);
 
-// Recorrer TODOS los punto
-punto.forEach( ( cadaPunto , i )=> {
-    // Asignamos un CLICK a cadaPunto
-    punto[i].addEventListener('click',()=>{
+    commentForm.reset();
+    updateCharCountHandler();
+  };
 
-        // Guardar la posición de ese PUNTO
-        let posicion  = i
-        // Calculando el espacio que debe DESPLAZARSE el GRANDE
-        let operacion = posicion * -50
+  commentForm.addEventListener('submit', submitCommentHandler);
 
-        // MOVEMOS el grand
-        grande.style.transform = `translateX(${ operacion }%)`
+  /* ----------------------------------------- */
+  /* 💾 LocalStorage */
+  /* ----------------------------------------- */
+  const saveComment = (text) => {
+    const stored = JSON.parse(localStorage.getItem('comments') || '[]');
+    stored.unshift(text);
+    localStorage.setItem('comments', JSON.stringify(stored));
+  };
 
-        // Recorremos TODOS los punto
-        punto.forEach( ( cadaPunto , i )=>{
-            // Quitamos la clase ACTIVO a TODOS los punto
-            punto[i].classList.remove('activo')
-        })
-        // Añadir la clase activo en el punto que hemos hecho CLICK
-        punto[i].classList.add('activo')
+  const loadComments = () => {
+    const stored = JSON.parse(localStorage.getItem('comments') || '[]');
+    stored.forEach(comment => {
+      const li = document.createElement('li');
+      li.classList.add('comments__item');
+      li.textContent = comment;
+      commentsList.append(li);
+    });
+  };
 
-    })
-})
+  loadComments();
+})();

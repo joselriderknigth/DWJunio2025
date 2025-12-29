@@ -7,6 +7,7 @@
     <title>Projecto Final</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Pagina principal Poryecto FInal lorem.">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -26,28 +27,92 @@
         </header>
 
         <div class="main grid-body">
+
             <section id="noticias" class="main__carousel">
                 <h2>Noticias Destacadas</h2>
-                <div class="carousel__track">
-                    <div class="grande">
-                        <img src="assets/02.jpg" alt="Imagen 1" class="img">
-                        <img src="assets/03.jpg" alt="Imagen 2" class="img">
+                <div id="carrouselr-container">
+                    <span onclick="carrouselRight()" class="btn"></span>
+                    <div id="carrouselr">
+                        <div class="carrousel">
+                            <a class="card"
+                                href="https://latam.kaspersky.com/resource-center/definitions/biometrics#:~:text=En%20la%20pr%C3%A1ctica%2C%20la%20seguridad,su%20uso%20en%20tiempo%20real."
+                                target="_blank">
+                                <img src="./images/48-biometrics-q75.jpg" alt="Noticia destacada 1">
+                                <div class="overlay">
+                                    <h3 class="title">¿Qué es la biometría y cómo se utiliza en la seguridad? - Kaspersky</h3>
+                                    <p class="desc">La biometría es cada vez más utilizada como una capa avanzada en muchos sistemas de seguridad personales y empresariales.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carrousel">
+                            <a class="card"
+                                href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/#:~:text=Biometr%C3%ADa%20y%20privacidad:%20%C2%BFpuede%20haber,Durante%20cu%C3%A1nto%20tiempo%20se%20conservar%C3%A1n."
+                                target="_blank">
+                                <img src="images/20-BLOG-OK.jpg" alt="Noticia destacada 2" loading="lazy"
+                                    class="carrousel__img">
+                                <div class="overlay">
+                                    <h3 class="title">Biometría: amenazas, riesgos y vulnerabilidades</h3>
+                                    <p class="desc">La biometría hace referencia a la identificación y autenticación de personas a partir de características físicas o conductuales únicas, como huellas dactilares, reconocimiento facial, iris o voz.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carrousel">
+                            <a class="card"
+                                href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety#:~:text=Viajes%20e%20inmigraci%C3%B3n:%20racionalizaci%C3%B3n%20de%20los%20procesos&text=El%20sector%20de%20viajes%20e,sean%20m%C3%A1s%20seguros%20y%20eficientes.&text=Aeropuertos%20y%20control%20fronterizo:%20Los,viajeros%20en%20los%20cruces%20fronterizos."
+                                target="_blank">
+                                <img src="images/BiometricSecurity.jpg" alt="Noticia destacada 3" loading="lazy"
+                                    class="carrousel__img">
+                                <div class="overlay">
+                                    <h3 class="title">Seguridad biométrica: el futuro de la seguridad personal y pública</h3>
+                                    <p class="desc">En una era en la que la seguridad digital es más crucial que nunca, la seguridad biométrica surge como un faro de esperanza e innovación.</p>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
-
-                    <ul class="puntos">
-                        <li class="carousel__btn--next"></li>
-                        <li class="punto"></li>
-                         <li class="carousel__btn--prev"></li>
-                    </ul>
+                    <span onclick="carrouselLeft()" class="btn"></span>
                 </div>
-
             </section>
 
-            <section id="comentarios" class="main__comments">
-                <h2>Comentarios Recientes</h2>
-                <div class="comment">💬 Excelente diseño, muy visual!</div>
-                <div class="comment">🔥 Me encanta el efecto Parallax!</div>
-                <div class="comment">💡 Súper responsivo y limpio.</div>
+            <section id="comentarios" class="comments">
+                <h2 class="comments__title">Comentarios Recientes</h2>
+
+                <!-- Formulario de comentarios -->
+                <form class="comments__form" action="#" method="POST" enctype="multipart/form-data">
+                    <label for="commentText" class="comments__label">Escribe tu comentario</label>
+
+                    <textarea id="commentText" name="commentText" class="comments__textarea" maxlength="200"
+                        required></textarea>
+
+                    <div class="comments__controls">
+                        <!-- Selector de emojis -->
+                        <div class="comments__emoji-picker" aria-label="Selector de emojis">
+                            <button type="button" class="comments__emoji-btn" title="Añadir emoji">
+                                😀
+                            </button>
+
+                            <div class="comments__emoji-list" hidden>
+                                <button type="button" class="comments__emoji-item">😀</button>
+                                <button type="button" class="comments__emoji-item">🔥</button>
+                                <button type="button" class="comments__emoji-item">💡</button>
+                                <button type="button" class="comments__emoji-item">😍</button>
+                                <button type="button" class="comments__emoji-item">👌</button>
+                                <button type="button" class="comments__emoji-item">💬</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="comments__submit" title="Enviar comentario">
+                            Publicar
+                        </button>
+                    </div>
+
+                    <p class="comments__counter">
+                        <span id="charCount">0</span>/200 caracteres
+                    </p>
+                </form>
+
+                <!-- Lista dinámica -->
+                <ul class="comments__list" id="commentsList"></ul>
             </section>
         </div>
 
