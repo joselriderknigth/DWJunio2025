@@ -28,19 +28,23 @@ function checkWidth() {
 }
 
 function setParams() {
- carrouselsPerPage = 1;
-  carrouselsCount = carrousels - 1;
+  if (containerWidth < 600) {
+    carrouselsPerPage = 1;
+  } else if (containerWidth < 900) {
+    carrouselsPerPage = 2;
+  } else {
+    carrouselsPerPage = 3;
+  }
+
+  carrouselsCount = carrousels - carrouselsPerPage;
 
   if (currentPosition < 0) currentPosition = 0;
   if (currentPosition > carrouselsCount) currentPosition = carrouselsCount;
 
-  currentMargin = -currentPosition * 100;
+  currentMargin = -(currentPosition * (100 / carrouselsPerPage));
   carrouselr.style.marginLeft = currentMargin + '%';
 
-  // Botón izquierdo
   buttons[0].classList.toggle('inactive', currentPosition === 0);
-
-  // Botón derecho
   buttons[1].classList.toggle('inactive', currentPosition === carrouselsCount);
 }
 
@@ -55,6 +59,11 @@ function carrouselLeft() {
   currentPosition++;
   setParams();
 };
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') carrouselRight();
+  if (e.key === 'ArrowRight') carrouselLeft();
+});
 
 (() => {
 
@@ -113,9 +122,24 @@ function carrouselLeft() {
   /* ----------------------------------------- */
   const saveComment = (text) => {
     const stored = JSON.parse(localStorage.getItem('comments') || '[]');
+
     stored.unshift(text);
+    if (stored.length > 50) stored.length = 50;
+
     localStorage.setItem('comments', JSON.stringify(stored));
   };
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.comments__emoji-picker')) {
+      emojiList.setAttribute('hidden', true);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      emojiList.setAttribute('hidden', true);
+    }
+  });
 
   const loadComments = () => {
     const stored = JSON.parse(localStorage.getItem('comments') || '[]');
@@ -129,3 +153,56 @@ function carrouselLeft() {
 
   loadComments();
 })();
+
+const accordions = document.querySelectorAll('.accordion');
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab__content');
+
+accordions.forEach(acc => {
+  acc.addEventListener('click', () => {
+    acc.classList.toggle('active');
+
+    const panel = acc.nextElementSibling;
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+
+    // Botones
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Contenido
+    tabContents.forEach(content => {
+      content.classList.toggle(
+        'active',
+        content.classList.contains(`tab__content--${target}`)
+      );
+    });
+  });
+});
+
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox__img');
+const lightboxClose = document.querySelector('.lightbox__close');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.removeAttribute('hidden');
+  });
+});
+
+lightboxClose.addEventListener('click', () => {
+  lightbox.setAttribute('hidden', true);
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.setAttribute('hidden', true);
+  }
+});

@@ -1,0 +1,191 @@
+/* ================= VARIABLES ================= */
+:root {
+  --max-width: 1200px;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --dark: #111;
+  --gray: #777;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.services-hero {
+  min-height: 15rem;
+  background: url('/diafinal/images/banner.jpg') center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+.services-hero__overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.services-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 13rem;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.services-hero__title {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ================= SECTIONS ================= */
+.services-section {
+  padding: var(--space-lg);
+}
+
+.services-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-lg);
+}
+
+.services-grid--reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+/* ================= CARDS ================= */
+.service-card {
+  padding: var(--space-md);
+}
+
+.service-card--image {
+  background-size: cover;
+  background-position: center;
+  min-height: 22rem;
+  border-radius: 0.5rem;
+}
+
+.service-card--info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.service-card__description {
+  color: var(--gray);
+}
+
+.service-card__description--line {
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.features--two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  font-weight: bolder;
+}
+
+.features--one-col li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= EQUIPMENT ================= */
+.equipment-banner {
+  background: #3c3f3ced;
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.equipment-banner__content {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm);
+  color:white;
+}
+
+.equipment-banner__image img {
+  max-width: 60%;
+  margin-top: var(--space-md);
+}
+
+/* ================= FOOTER ================= */
+.footer__main {
+  background: var(--dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer__info h3 {
+  font-family: "Times New Roman", serif;
+  font-size: smaller;
+}
+.footer__info p {
+ font-size: smaller;
+}
+.footer__info address {
+ font-size: smaller;
+}
+
+.footer__email {
+  font-family: "Comic Sans MS", cursive;
+  color: rgb(101, 181, 48);
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: x-large;
+}
+
+.footer__social a {
+  margin-left: 1rem;
+  color: white;
+  font-size: smaller;
+}
+
+.footer__copyright {
+  background: white;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .services-grid,
+  .services-grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-banner__content {
+    flex-direction: column;
+    text-align: left;
+  }
+}
