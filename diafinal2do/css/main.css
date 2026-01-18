@@ -70,12 +70,11 @@ body {
   padding: 1rem;
 }
 
-/* ...*/
-/* #carrouselr {
+#carrouselr {
   display: flex;
-  width: 100%;
   transition: transform 0.5s ease;
-} */
+  will-change: transform;
+}
 
 /* .carrousel {
   flex: 0 0 auto;
@@ -122,14 +121,26 @@ body {
    right: 10px;
   transform: translateY(-50%) rotate(135deg);
 }
+#carrouselr-container .btn-left {
+  left: 10px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+#carrouselr-container .btn-right {
+  right: 10px;
+  transform: translateY(-50%) rotate(135deg);
+}
 
 #carrouselr-container #carrouselr {
   display: flex;
-  width: 300%;
+ 
   height: 100%;
-  transition: margin-left 0.5s ease;
-}
 
+}
+#carrouselr .carrousel {
+  flex: 0 0 auto;
+  width: 100%;
+}
 #carrouselr-container #carrouselr .carrousel {
   height: 90%;
   margin: auto 10px;
@@ -237,6 +248,8 @@ body {
   overflow-y: auto;
   margin: 0;
   scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
 }
 
 /* Título */

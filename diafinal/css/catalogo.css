@@ -1,0 +1,235 @@
+/* ================= VARIABLES ================= */
+:root {
+  --max-width: 1200px;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --dark: #111;
+  --gray: #777;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.catalogo-hero {
+  min-height: 15rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.catalogo-hero__overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  padding: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.catalogo-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.catalogo-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalogo-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+}
+
+.header__logo {
+    font-size: xx-large;
+}
+
+.logo img {
+  max-width: 13rem;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.main-nav a:hover {
+  color: rgba(14, 230, 111, 0.849);
+}
+
+.catalogo-hero__title {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= SECTIONS ================= */
+.catalogo-section {
+  padding: var(--space-lg);
+  background-color: #357e4591;
+}
+
+.catalogo-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-lg);
+}
+
+.catalogo-grid--reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+/* ================= videos ================= */
+.catalogo-card {
+  padding: var(--space-md);
+}
+
+.catalogo-card--video {
+  background-size: cover;
+  background-position: center;
+  min-height: 22rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.video-demo {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+
+.catalogo-card--info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.catalogo-card__description {
+  color: #272424f5;
+}
+
+.catalogo-card__description--line {
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+
+/* ================= FEATURES ================= */
+.features {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.features--two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  font-weight: bolder;
+}
+
+.features--one-col li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= FOOTER ================= */
+.footer__main {
+  background: var(--dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer__info h3 {
+  font-family: "Times New Roman", serif;
+  font-size: smaller;
+}
+.footer__info p {
+ font-size: smaller;
+}
+.footer__info address {
+ font-size: smaller;
+}
+
+.footer__email {
+  font-family: "Comic Sans MS", cursive;
+  color: rgb(101, 181, 48);
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: x-large;
+    cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer__email:hover {
+  font-size:xx-large;
+}
+
+.footer__social a {
+  margin-left: 1rem;
+  color: white;
+  font-size: smaller;
+    cursor: pointer;
+   border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+    background-color: white;
+     transform: scale(3.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.footer__copyright {
+  background: white;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .services-grid,
+  .services-grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-banner__content {
+    flex-direction: column;
+    text-align: left;
+  }
+}

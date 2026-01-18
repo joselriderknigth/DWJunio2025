@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projecto Final - Catalogo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pagina de Catalogos.">
+    <link rel="stylesheet" type="text/css" href="css/catalogo.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER / BANNER ================= -->
+    <header class="catalogo-hero">
+        <picture class="catalogo-hero__bg">
+            <source srcset="images/banner-catalogo.webp" type="image/webp">
+            <source srcset="images/banner-catalogo.jpg" type="image/jpeg">
+            <img src="images/banner-catalogo.JPG" alt="banner catalogo" loading="lazy">
+        </picture>
+        <div class="catalogo-hero__overlay">
+            <div class="catalogo-hero__top">
+                <div class="header__logo" aria-label="Logotipo del sitio">
+                    <a href="index.html" class="logo" title="retorna a page inicial desde logo"><img
+                            src="images/favicons/favicon-32x32.png" alt="Logo empresa"></a>
+                </div>
+
+                <nav class="main-nav">
+                    <a href="index.html" title="retorna a page inicial desde menu">Inicio</a>
+                    <a href="servicios.html" title="abre a servicios desde menu page inicial">Servicios</a>
+                    <a href="catalogo.html" title="Visitar la página de Catalogo">Catálogo</a>
+                    <a href="soporte.html" title="Visitar la página de Soporte">Soporte</a>
+                    <a href="contactanos.html" title="abre a contactanos desde menu page inicial">Contáctenos</a>
+                </nav>
+            </div>
+
+            <h1 class="catalogo-hero__title">Catalogo de Productos</h1>
+        </div>
+    </header>
+
+    <main>
+
+
+        <!-- ================= SECCIÓN 2 ================= -->
+        <section class="catalogo-section">
+            <div class="catalogo-grid catalogo-grid--reverse">
+
+                <!-- catalogo CARD VIDEO -->
+                <div class="catalogo-card catalogo-card--video">
+                    <section class="video-section">
+                        <video class="video-demo" autoplay muted loop controls preload="none"
+                            poster="images/catalogoposter.webp"
+                            aria-label="Video demostrativo del catalogo de productos">
+
+                            <source src="videos/catalogo.webm" type="video/webm">
+                            <source src="videos/catalogo.mp4" type="video/mp4">
+
+                        </video>
+                    </section>
+
+                </div>
+
+                <!-- catalogo FORM INFO -->
+                <div class="catalogo-card--info">
+                    <article class="catalogo-card catalogo-card--info">
+                        <h2>Nuestros Productos</h2>
+
+                        <p class="service-card__description">
+                            Encuentra el equipamiento ideal para tu empresa. Todos nuestros productos cuentan con garantía, soporte y opciones de instalación por técnicos certificados.
+                        </p>
+
+                        <h3>Otros Sistemas y Subprocesos de Consultoría:</h3>
+                        <h4>Sistemas avanzados de reconocimiento facial para una autenticación Segura y sin contacto</h4>
+
+                        <ul class="features features--one-col">
+                            <li><strong>Verificación facial y rasgos</strong></li>
+                            <li><strong>Ropa y accesorios tácticos</strong></li>
+                            <li><strong>Automatización de carga y descarga</strong></li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer__main">
+
+            <div class="footer__info">
+                <h3>Contáctenos</h3>
+                <p>Si tienes alguna pregunta o necesitas ayuda en algo siente libre de conectar a nuestro equipo.</p>
+
+                <a href="mailto:joseluiskid007@gmail.com" class="footer__email" target="_blank"
+                    rel="noopener noreferrer" title="abre a enviar correo de contacto del footer">
+                    <img src="images/email_favicon_io/favicon-16x16.png" alt="sent emal">joseluiskid007@gmail.com
+                </a>
+
+                <address>
+                    <mark>Oficina Miami:</mark> 20801 Biscayne Blvd, Suite 403, Aventura, Florida (USA), 33180 -
+                    <mark>Teléfono:</mark> (001) 305 307-0278
+                </address>
+            </div>
+
+            <div class="footer__social">
+                <a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                    title="Abrir a Twiter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
+                    title="Abrir a Instagram" aria-label="Instagram"><img
+                        src="images/insta_favicon_io/favicon-32x32.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
+                    rel="noopener noreferrer" title="Abrir a Facebook" aria-label="Facebook"><img
+                        src="images/face-favicon_io/favicon-32x32.png" alt="Facebook"></a>
+                <a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
+                    title="Abrir a Tiktok" aria-label="Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
+                        alt="Tiktok"></a>
+
+            </div>
+
+        </div>
+
+        <div class="footer__copyright">
+            © 2026 @jolu_grupodigital Todos los derechos reservados
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

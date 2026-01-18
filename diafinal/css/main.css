@@ -50,7 +50,7 @@ body {
 /* GRID BODY */
 .grid-body {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.1fr 1.9fr;
   gap: 1.5rem;
   padding: 2rem;
   align-items: start;

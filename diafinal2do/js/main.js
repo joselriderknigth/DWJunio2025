@@ -8,74 +8,77 @@ const commentsList = document.getElementById('commentsList');
 const emojiBtn = document.querySelector('.comments__emoji-btn');
 const emojiList = document.querySelector('.comments__emoji-list');
 
-var container = document.getElementById('carrouselr-container');
-var carrouselr = document.getElementById('carrouselr');
-var carrousels = document.getElementsByClassName('carrousel').length;
-var buttons = document.getElementsByClassName('btn');
 
 var currentPosition = 0;
 var currentMargin = 0;
-var carrouselsPerPage = 0;
-var carrouselsCount = carrousels - carrouselsPerPage;
-var containerWidth = container.offsetWidth;
+
+
 var prevKeyActive = false;
 var nextKeyActive = true;
 
-window.addEventListener("resize", checkWidth);
-function checkWidth() {
-  containerWidth = container.offsetWidth;
-  setParams(containerWidth);
+const container = document.getElementById('carrouselr-container');
+const track = document.getElementById('carrouselr');
+const items = document.querySelectorAll('.carrousel');
+const btnLeft = document.querySelector('.btn-left');
+const btnRight = document.querySelector('.btn-right');
+
+var containerWidth = container.offsetWidth;
+let index = 0;
+let itemsPerView = 1;
+let itemWidth = 0;
+
+function updateLayout() {
+  const containerWidth = container.offsetWidth;
+
+  if (containerWidth < 600) itemsPerView = 1;
+  else if (containerWidth < 900) itemsPerView = 2;
+  else itemsPerView = 3;
+
+  const style = getComputedStyle(container);
+  const padding =
+    parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+
+  itemWidth = (containerWidth - padding) / itemsPerView;
+
+  items.forEach(item => {
+    item.style.width = `${itemWidth}px`;
+  });
+
+  moveCarousel();
+  updateButtons();
 }
 
-function setParams() {
-  containerWidth = container.offsetWidth;
-
-  const isEdgeCase = containerWidth >= 980 && containerWidth <= 1020;
-
-  if (isEdgeCase) {
-    carrouselsPerPage = 1;
-  } else if (containerWidth < 600) {
-    carrouselsPerPage = 1;
-  } else if (containerWidth < 900) {
-    carrouselsPerPage = 2;
-  } else {
-    carrouselsPerPage = 3;
-  }
-
-  carrouselsCount = carrousels - carrouselsPerPage;
-
-  if (currentPosition < 0) currentPosition = 0;
-  if (currentPosition > carrouselsCount) currentPosition = carrouselsCount;
-
-  const step = 100 / carrouselsPerPage;
-
-  // Movimiento limpio y predecible
-  carrouselr.style.marginLeft = `-${currentPosition * step}%`;
-
-  buttons[0].classList.toggle('inactive', currentPosition === 0);
-  buttons[1].classList.toggle('inactive', currentPosition === carrouselsCount);
+function moveCarousel() {
+  track.style.transform = `translateX(-${index * itemWidth}px)`;
 }
 
-setParams(container.offsetWidth);
+function updateButtons() {
+  btnLeft.classList.toggle('inactive', index === 0);
+  btnRight.classList.toggle(
+    'inactive',
+    index >= items.length - itemsPerView
+  );
+}
 
-function carrouselRight() {
-  if (currentPosition > 0) {
-    currentPosition--;
-    setParams();
+btnLeft.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    moveCarousel();
+    updateButtons();
   }
-};
-
-function carrouselLeft() {
-  if (currentPosition < carrouselsCount) {
-    currentPosition++;
-    setParams();
-  }
-};
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft') carrouselRight();
-  if (e.key === 'ArrowRight') carrouselLeft();
 });
+
+btnRight.addEventListener('click', () => {
+  if (index < items.length - itemsPerView) {
+    index++;
+    moveCarousel();
+    updateButtons();
+  }
+});
+
+window.addEventListener('resize', updateLayout);
+updateLayout();
+
 
 (() => {
 
@@ -219,14 +222,4 @@ lightbox.addEventListener('click', (e) => {
   }
 });
 
-/* ----------------------------------------- */
-/* 💾 contactanos FORM valida email */
-/* ----------------------------------------- */
-document.querySelector('.contact__form').addEventListener('submit', (e) => {
-  const email = document.getElementById('email').value;
 
-  if (!email.includes('@')) {
-    e.preventDefault();
-    alert('Por favor ingrese un correo válido');
-  }
-});
