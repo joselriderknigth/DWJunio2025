@@ -1,0 +1,329 @@
+/* ================= VARIABLES ================= */
+:root {
+  --max-width: 1200px;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --dark: #111;
+  --gray: #777;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.contactanos-hero {
+  min-height: 15rem;
+  /* background: url('/diafinal/images/banner-contact.JPG') center/cover no-repeat; */
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactanos-hero__overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  padding: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.contactanos-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contactanos-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contactanos-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+}
+
+.header__logo {
+    font-size: xx-large;
+}
+
+.logo img {
+  max-width: 13rem;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.main-nav a:hover {
+  color: rgba(14, 230, 111, 0.849);
+}
+
+.contactanos-hero__title {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= SECTIONS ================= */
+.contactanos-section {
+  padding: var(--space-lg);
+  background-color: #357e4591;
+}
+
+.contactanos-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-lg);
+}
+
+.contactanos-grid--reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+/* ================= CARDS ================= */
+.contactanos-card {
+  padding: var(--space-md);
+}
+
+.contactanos-card--image {
+  background-size: cover;
+  background-position: center;
+  min-height: 22rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactanos-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.contactanos-card__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contactanos-card--info {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.contactanos-card__description {
+  color: #e9e2e2f5;
+}
+
+.contactanos-card__description--line {
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+.contactanos-card--image h3{
+  color: #e9e2e2f5;
+}
+
+.contact__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #046d2aa6;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+   border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.contact__whatsapp:hover {
+  text-decoration: underline;
+   background-color: white;
+     transform: scale(2.05);
+  box-shadow: 0 10px 25px rgba(15, 14, 14, 0.247);
+  border-radius: 5px;
+}
+
+.contactanos-card__content{
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)
+  );
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.contact__item label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.contact__item input,
+.contact__item select,
+.contact__item textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.contact__item input:focus,
+.contact__item select:focus,
+.contact__item textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.contact__item--button {
+  align-items: center;
+}
+
+.contact__item--button button {
+  padding: 0.7rem 2rem;
+  background: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact__item--button button:hover {
+  background: #333;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.features--two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  font-weight: bolder;
+}
+
+.features--one-col li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= FOOTER ================= */
+.footer__main {
+  background: var(--dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer__info h3 {
+  font-family: "Times New Roman", serif;
+  font-size: smaller;
+}
+.footer__info p {
+ font-size: smaller;
+}
+.footer__info address {
+ font-size: smaller;
+}
+
+.footer__email {
+  font-family: "Comic Sans MS", cursive;
+  color: rgb(101, 181, 48);
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: x-large;
+    cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer__email:hover {
+  font-size:xx-large;
+}
+
+.footer__social a {
+  margin-left: 1rem;
+  color: white;
+  font-size: smaller;
+    cursor: pointer;
+   border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+    background-color: white;
+     transform: scale(3.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.footer__copyright {
+  background: white;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .services-grid,
+  .services-grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-banner__content {
+    flex-direction: column;
+    text-align: left;
+  }
+}
