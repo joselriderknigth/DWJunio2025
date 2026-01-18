@@ -8,6 +8,12 @@ const commentsList = document.getElementById('commentsList');
 const emojiBtn = document.querySelector('.comments__emoji-btn');
 const emojiList = document.querySelector('.comments__emoji-list');
 
+const asidePopup = document.getElementById('aside-popup');
+const popupTitle = document.getElementById('popupTitle');
+const popupText = document.getElementById('popupText');
+const popupPicture = document.getElementById('popupPicture');
+const popupClose = asidePopup.querySelector('.lightbox__close');
+
 var container = document.getElementById('carrouselr-container');
 var carrouselr = document.getElementById('carrouselr');
 var carrousels = document.getElementsByClassName('carrousel').length;
@@ -228,5 +234,35 @@ document.querySelector('.contact__form').addEventListener('submit', (e) => {
   if (!email.includes('@')) {
     e.preventDefault();
     alert('Por favor ingrese un correo válido');
+  }
+});
+
+document.querySelectorAll('.aside__menu .accordion').forEach(item => {
+  item.addEventListener('click', () => {
+
+    const title = item.dataset.title;
+    const imgBase = item.dataset.img;
+    const text = item.dataset.text;
+
+    popupTitle.textContent = title;
+    popupText.textContent = text;
+
+    popupPicture.innerHTML = `
+      <source srcset="${imgBase}.webp" type="image/webp">
+      <source srcset="${imgBase}.jpg" type="image/jpeg">
+      <img src="${imgBase}.jpg" alt="${title}">
+    `;
+
+    asidePopup.removeAttribute('hidden');
+  });
+});
+
+popupClose.addEventListener('click', () => {
+  asidePopup.setAttribute('hidden', true);
+});
+
+asidePopup.addEventListener('click', (e) => {
+  if (e.target === asidePopup) {
+    asidePopup.setAttribute('hidden', true);
   }
 });

@@ -499,6 +499,69 @@ body {
   cursor: pointer;
 }
 
+.lightbox__content {
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.lightbox__content picture img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+
+/* ----------------------------------------- */
+/* 🌐 Landing sections */
+/* ----------------------------------------- */
+.tab__content--landing {
+  padding: 0;
+}
+
+/* Sección base */
+.landing__section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contenido */
+.landing__content {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.landing__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.landing__content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Sección 1 */
+.landing__section--one {
+  background-image: url("/images/escaners-ip.JPG");
+}
+
+/* Sección 2 */
+.landing__section--two {
+  background-image: url("/images/handHeld-ip.JPG");
+}
+
 .footer__social a {
   margin-left: 1rem;
   color: white;

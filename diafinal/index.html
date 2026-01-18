@@ -176,12 +176,18 @@
 
         <div class="main grid-body grid-body--back">
             <aside class="aside__menu">
-                <button class="accordion">Electrónicos</button>
-                <div class="panel">Smartphones, Tablets, Accesorios</div>
-                <button class="accordion">Ropa</button>
-                <div class="panel">Camisas, Pantalones, Zapatos</div>
-                <button class="accordion">Deportes</button>
-                <div class="panel">Balones, Pesas, Bicicletas</div>
+                <button class="accordion" data-title="Escáneres Tipo Pistola" data-img="images/escaners-ip"
+                    data-text="Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales.">Escáneres Tipo
+                    Pistola</button>
+                <div class="panel">Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales</div>
+                <button class="accordion" data-title="HandHeld" data-img="images/handHeld-ip"
+                    data-text="HandHeld e Impresoras Móviles.">HandHeld</button>
+                <div class="panel">HandHeld e Impresoras Móviles</div>
+                <button class="accordion" data-title="PosBanco" data-img="images/posbanco-ip"
+                    data-text="Cajas de Dinero, Impresoras POS de Banco y Bancarias.">POS de Banco</button>
+                <div class="panel">Cajas de Dinero, Impresoras POS de Banco y Bancarias, Monitores de Toque,
+                    Todo en uno para Puntos de Venta
+                </div>
             </aside>
 
             <section class="main__content">
@@ -193,15 +199,44 @@
                 <div class="tab__content tab__content--lightbox active">
                     <h2>Galería de Productos</h2>
                     <div class="gallery">
-                        <img src="./images/camaras-1.JPG" alt="Producto A" />
-                        <img src="./images/camaras-2.JPG" alt="Producto B" />
-                        <img src="./images/camaras-3.JPG" alt="Producto C" />
+                        <picture>
+                            <source srcset="images/camaras-1.webp" type="image/webp">
+                            <source srcset="images/camaras-1.jpg" type="image/jpeg">
+                            <img src="images/camaras-1.jpg" alt="Producto A" loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="images/camaras-2.webp" type="image/webp">
+                            <source srcset="images/camaras-2.jpg" type="image/jpeg">
+                            <img src="images/camaras-2.jpg" alt="Producto B" loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="images/camaras-3.webp" type="image/webp">
+                            <source srcset="images/camaras-3.jpg" type="image/jpeg">
+                            <img src="images/camaras-3.jpg" alt="Producto C" loading="lazy">
+                        </picture>
                     </div>
                 </div>
 
                 <div class="tab__content tab__content--landing">
-                    <h2>Sección de Servicios</h2>
-                    <p>Contenido de landing dividido en secciones con scroll suave.</p>
+                    <section class="landing__section landing__section--one">
+                        <div class="landing__content">
+                            <h2>Escáneres Tipo Pistola</h2>
+                            <p>
+                                Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="landing__section landing__section--two">
+                        <div class="landing__content">
+                            <h2>HandHeld</h2>
+                            <p>
+                                HandHeld e Impresoras Móviles
+                            </p>
+                        </div>
+                    </section>
                 </div>
             </section>
         </div>
@@ -220,7 +255,28 @@
 
     <div id="lightbox" class="lightbox" hidden>
         <span class="lightbox__close">&times;</span>
-        <img class="lightbox__img" src="" alt="">
+        <img class="lightbox__img" src="images/placeholder.webp" alt="">
+    </div>
+
+    <div id="aside-popup" class="lightbox" hidden>
+
+        <div class="lightbox__content" role="dialog" aria-modal="true">
+
+            <button class="lightbox__close" aria-label="Cerrar popup">✕</button>
+
+            <h3 id="popupTitle">Producto</h3>
+
+            <picture id="popupPicture">
+                <source srcset="images/producto.webp" type="image/webp">
+                <source srcset="images/producto.jpg" type="image/jpeg">
+                <img src="images/producto.jpg" alt="Producto relacionado">
+            </picture>
+
+            <p id="popupText">
+                Información del producto seleccionado.
+            </p>
+
+        </div>
     </div>
 </body>
 
