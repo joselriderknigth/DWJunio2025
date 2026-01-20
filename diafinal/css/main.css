@@ -554,12 +554,12 @@ body {
 
 /* Sección 1 */
 .landing__section--one {
-  background-image: url("/images/escaners-ip.JPG");
+  background-image: url('../images/escaners-ip.JPG');
 }
 
 /* Sección 2 */
 .landing__section--two {
-  background-image: url("/images/handHeld-ip.JPG");
+  background-image: url('../images/handHeld-ip.JPG');
 }
 
 .footer__social a {
