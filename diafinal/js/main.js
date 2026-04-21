@@ -239,7 +239,7 @@ document.querySelectorAll('.aside__menu .accordion').forEach(item => {
     popupPicture.innerHTML = `
       <source srcset="${imgBase}.webp" type="image/webp">
       <source srcset="${imgBase}.jpg" type="image/jpeg">
-      <img src="${imgBase}.jpg" alt="${title}">
+      <img src="${imgBase}.JPG" alt="${title}">
     `;
 
     asidePopup.removeAttribute('hidden');
