@@ -4,14 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projecto Final - Contactanos</title>
+    <title>Proyecto final - Contáctanos</title>
+
+    <meta name="description" content="Página de contacto de JOLU Grupo Digital.">
+    <meta property="og:title" content="JOLU Grupo Digital - Contáctanos">
+    <meta property="og:description" content="Póngase en contacto con JOLU Grupo Digital para soluciones de seguridad.">
+    <meta property="og:image" content="images/banner-contact.jpg">
+    <meta property="og:url" content="https://joludigitalgroup.com/contactanos.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOLU Grupo Digital - Contáctanos">
+    <meta name="twitter:description" content="Póngase en contacto con JOLU Grupo Digital para soluciones de seguridad.">
+    <meta name="twitter:image" content="images/banner-contact.jpg">
+    <meta name="twitter:url" content="https://joludigitalgroup.com/contactanos.html">
+
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="images/favicons/site.webmanifest">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de Contactos.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/contactanos.css">
     <script src="js/contactanos.js" defer></script>
 </head>
@@ -23,21 +39,23 @@
         <picture class="contactanos-hero__bg">
             <source srcset="images/banner-contact.webp" type="image/webp">
             <source srcset="images/banner-contact.jpg" type="image/jpeg">
-            <img src="images/banner-contact.JPG" alt="banner contactanos" loading="lazy">
+            <img src="images/banner-contact.jpg" alt="Banner de la sección contáctanos" loading="lazy">
         </picture>
         <div class="contactanos-hero__overlay">
             <div class="contactanos-hero__top">
                 <div class="header__logo" aria-label="Logotipo del sitio">
-                    <a href="index.html" class="logo" title="retorna a page inicial desde logo"><img
-                            src="images/favicons/favicon-32x32.png" alt="Logo empresa"></a>
+                    <a href="index.html" class="logo" title="Retorna a página inicial desde el logo de la empresa"><img
+                            src="images/favicons/logojolu.webp" alt="Logo de la empresa" loading="lazy"></a>
                 </div>
 
-                <nav class="main-nav">
-                    <a href="index.html" title="retorna a page inicial desde menu">Inicio</a>
-                    <a href="servicios.html" title="abre a servicios desde menu page inicial">Servicios</a>
-                       <a href="catalogo.html" title="Visitar la página de Catalogo">Catálogo</a>
-                    <a href="soporte.html" title="Visitar la página de Soporte">Soporte</a>
-                    <a href="contactanos.html" title="abre a contactanos desde menu page inicial">Contáctenos</a>
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul class="nav__list">
+                        <li><a href="index.html" title="Retorna a la página de inicio">Inicio</a></li>
+                        <li><a href="servicios.html" title="Abre la página de servicios">Servicios</a></li>
+                        <li><a href="catalogo.html" title="Visitar la página de catálogo">Catálogo</a></li>
+                        <li><a href="soporte.html" title="Visitar la página de soporte">Soporte</a></li>
+                        <li><a href="contactanos.html" title="Abre la página activa de contáctanos">Contáctenos</a></li>
+                    </ul>
                 </nav>
             </div>
 
@@ -46,7 +64,6 @@
     </header>
 
     <main>
-
 
         <!-- ================= SECCIÓN 2 ================= -->
         <section class="contactanos-section">
@@ -57,24 +74,22 @@
                     <picture class="contactanos-card__bg">
                         <source srcset="images/contactanos1.webp" type="image/webp">
                         <source srcset="images/contactanos1.jpg" type="image/jpeg">
-                        <img src="images/contactanos1.JPG" alt="banner contactanos" loading="lazy">
+                        <img src="images/contactanos1.jpg" alt="Imagen representativa de atención al cliente" loading="lazy">
                     </picture>
 
                     <div class="contactanos-card__content">
-                        <h2 class="contactanos-card--info">Soluciones personalizadas para sus prioridades de seguridad
-                        </h2>
+                        <h2 class="contactanos-card--info">Soluciones personalizadas para sus prioridades de seguridad</h2>
 
                         <p class="contactanos-card__description">
                             Nos enorgullecemos de todo lo que hacemos, el control sobre los productos nos permite
-                            garantizar
-                            que nuestros clientes reciban un servicio de la mejor calidad.
+                            garantizar que nuestros clientes reciban un servicio de la mejor calidad.
                         </p>
 
                         <h3>
                             <a href="https://wa.me/593987797659" target="_blank" rel="noopener noreferrer"
                                 aria-label="Abrir chat de WhatsApp" class="contact__whatsapp"
-                                title="abre a chat whuatsweb">
-                                <img src="images/whuats-favicon_io/favicon-32x32.png" alt="WhatsApp" width="24">
+                                title="Abre chat de comunicación mediante WhatsApp">
+                                <img src="images/whuats-favicon_io/favicon-32x32.png" alt="Icono de WhatsApp" width="24" loading="lazy">
                             </a>
                             Contáctanos al +593987797659.
                         </h3>
@@ -85,8 +100,7 @@
                 <!-- contact FORM INFO -->
                 <div class="contactanos-formualrio">
                     <section class="contact">
-
-                        <h2>Formulario de Contacto</h2>
+                        <h2>Formulario de contacto</h2>
 
                         <form class="contact__form" action="procesar-formulario.php" method="post"
                             enctype="multipart/form-data">
@@ -95,22 +109,22 @@
 
                                 <li class="contact__item">
                                     <label for="nombre">Nombre completo</label>
-                                    <input type="text" id="nombre" name="nombre" required>
+                                    <input type="text" id="nombre" name="nombre" autocomplete="name" required>
                                 </li>
 
                                 <li class="contact__item">
                                     <label for="email">Correo electrónico</label>
-                                    <input type="email" id="email" name="email" required>
+                                    <input type="email" id="email" name="email" autocomplete="email" required>
                                 </li>
 
                                 <li class="contact__item">
                                     <label for="telefono">Teléfono</label>
-                                    <input type="tel" id="telefono" name="telefono">
+                                    <input type="tel" id="telefono" name="telefono" autocomplete="tel">
                                 </li>
 
                                 <li class="contact__item">
                                     <label for="servicio">Servicio de interés</label>
-                                    <select id="servicio" name="servicio" required>
+                                    <select id="servicio" name="servicio" autocomplete="off" required>
                                         <option value="">Seleccione una opción</option>
                                         <option value="vigilancia">Vigilancia electrónica</option>
                                         <option value="control">Control y gestión</option>
@@ -120,7 +134,7 @@
 
                                 <li class="contact__item">
                                     <label for="mensaje">Mensaje</label>
-                                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                                    <textarea id="mensaje" name="mensaje" rows="4" autocomplete="off" required></textarea>
                                 </li>
 
                                 <li class="contact__item">
@@ -129,7 +143,7 @@
                                 </li>
 
                                 <li class="contact__item contact__item--button">
-                                    <button type="submit">Enviar mensaje</button>
+                                    <button type="submit" title="Enviar el formulario con tus datos de contacto" aria-label="Enviar formulario">Enviar mensaje</button>
                                 </li>
 
                             </ul>
@@ -141,8 +155,6 @@
 
             </div>
         </section>
-
-
 
     </main>
 
@@ -156,8 +168,8 @@
                 <p>Si tienes alguna pregunta o necesitas ayuda en algo siente libre de conectar a nuestro equipo.</p>
 
                 <a href="mailto:joseluiskid007@gmail.com" class="footer__email" target="_blank"
-                    rel="noopener noreferrer" title="abre a enviar correo de contacto del footer">
-                    <img src="images/email_favicon_io/favicon-16x16.png" alt="sent emal">joseluiskid007@gmail.com
+                    rel="noopener noreferrer" title="Enviar correo de contacto directo corporativo" aria-label="Enviar correo electrónico">
+                    <img src="images/email_favicon_io/favicon-16x16.png" alt="Icono de email" loading="lazy">joseluiskid007@gmail.com
                 </a>
 
                 <address>
@@ -167,18 +179,19 @@
             </div>
 
             <div class="footer__social">
-                <a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                    title="Abrir a Twiter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Twitter"></a>
-                <a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Instagram" aria-label="Instagram"><img
-                        src="images/insta_favicon_io/favicon-32x32.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
-                    rel="noopener noreferrer" title="Abrir a Facebook" aria-label="Facebook"><img
-                        src="images/face-favicon_io/favicon-32x32.png" alt="Facebook"></a>
-                <a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Tiktok" aria-label="Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
-                        alt="Tiktok"></a>
-
+                <ul class="social__list">
+                    <li><a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Twitter X"
+                        title="Abrir canal corporativo Twitter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Logo de Twitter" loading="lazy"></a></li>
+                    <li><a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
+                        title="Abrir canal corporativo Instagram" aria-label="Ir al perfil de Instagram"><img
+                            src="images/insta_favicon_io/favicon-32x32.png" alt="Logo de Instagram" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
+                        rel="noopener noreferrer" title="Abrir canal corporativo Facebook" aria-label="Ir al perfil de Facebook"><img
+                            src="images/face-favicon_io/favicon-32x32.png" alt="Logo de Facebook" loading="lazy"></a></li>
+                    <li><a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
+                        title="Abrir canal corporativo Tiktok" aria-label="Ir al perfil de Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
+                            alt="Logo de Tiktok" loading="lazy"></a></li>
+                </ul>
             </div>
 
         </div>

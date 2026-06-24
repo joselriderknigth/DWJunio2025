@@ -268,7 +268,7 @@ body {
 
 .footer__info h3 {
   font-family: "Times New Roman", serif;
-  font-size: smaller;
+  font-size: 1.5rem;
 }
 .footer__info p {
  font-size: smaller;
@@ -327,3 +327,37 @@ body {
     text-align: left;
   }
 }
+/* =========================================
+   FIX: MENÚS SIEMPRE AL FRENTE Y CLICKEABLES
+   (Aplicación de Position - Día 12)
+   ========================================= */
+   .header,
+   .catalogo-hero__top,
+   .contactanos-hero__top,
+   .services-hero__top {
+       position: relative;
+       z-index: 50;
+   }
+   
+   .main-nav,
+   .header__nav {
+       position: relative;
+       z-index: 60;
+   }
+   
+   .nav__list {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       gap: 1.5rem;
+       list-style: none;
+       margin: 0;
+       padding: 0;
+   }
+   
+   .nav__list a {
+       position: relative;
+       z-index: 70;
+       cursor: pointer;
+       pointer-events: auto;
+   }

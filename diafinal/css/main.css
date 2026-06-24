@@ -1,483 +1,560 @@
+/* ========================================================
+   Hoja de estilos principal (main.css)
+   Metodología utilizada: el BEM (Block, Element, Modifier que pidió usted profe).
+   ======================================================== */
+
+/* ----------------------------------------- */
+/* 1. Variables globales y reseteo  */
+/* ----------------------------------------- */
+:root {
+  --primary-color: #92b494;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --font-main: 'Bebas Neue', sans-serif;
+  --font-text: Arial, Helvetica, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* PARALLAX */
-.parallax {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background-size: cover;
-  background-position: center;
-}
-
-.parallax--front {
-   background-image: url("../images/background.jpg"); 
-  background-image: image-set(
-    url("../images/background.webp") type("image/webp"),
-    url("../images/background.jpg") type("image/jpeg")
-  );
-}
-
-.parallax--back {
-   background-image: url("../images/backgroundback.jpg"); 
-  background-image: image-set(
-    url("../images/backgroundback.webp") type("image/webp"),
-    url("../images/background.jpg") type("image/jpeg")
-  );
-}
-
-/* GRID HEADER */
-.grid-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  background: #357e4591;
-  padding: 1rem 2rem;
-  backdrop-filter: blur(5px);
-}
-
-/* GRID BODY */
-.grid-body {
-  display: grid;
-  grid-template-columns: 2.1fr 1.9fr;
-  gap: 1.5rem;
-  padding: 2rem;
-  align-items: start;
-}
-
-.grid-body--back {
-  grid-template-columns: 250px 1fr;
-}
-
-/* FOOTER */
-.grid-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* ...*/
-/* #carrouselr {
-  display: flex;
-  width: 100%;
-  transition: transform 0.5s ease;
-} */
-
-/* .carrousel {
-  flex: 0 0 auto;
-} */
-
-#carrouselr-container {
-
-  width: 90%;
-  max-width: 120em;
-  background: #3f4141;
-  box-shadow: 5px 5px 8px gray inset;
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-}
-
-#carrouselr-container .btn {
-  position: absolute;
-  top: calc(50% - 10px);
-  height: 30px;
-  width: 30px;
-  border-left: 8px solid red;
-  border-top: 8px solid red;
-  cursor: pointer;
-  z-index: 50;
-  background: rgba(0,0,0,0.4);
-  pointer-events: auto;
-}
-
-#carrouselr-container .btn:hover {
-  transform: scale(1.2);
-}
-
-#carrouselr-container .btn.inactive {
-  border-color: rgb(153, 121, 126);
-}
-
-#carrouselr-container .btn:first-of-type {
-    left: 10px;
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-#carrouselr-container .btn:last-of-type {
-   right: 10px;
-  transform: translateY(-50%) rotate(135deg);
-}
-
-#carrouselr-container #carrouselr {
-  display: flex;
-  width: 300%;
-  height: 100%;
-  transition: margin-left 0.5s ease;
-}
-
-#carrouselr-container #carrouselr .carrousel {
-  height: 90%;
-  margin: auto 10px;
-  background-color: #c6c6c6;
-  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-  display: grid;
-  place-items: center;
-
-}
-
-#carrouselr-container #carrouselr .carrousel span {
-  color: white;
-  font-size: 150px;
-}
-
-#carrouselr-container #carrouselr .carrousel__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Importante */
-  border-radius: 0.5rem;
-}
-
-/* CARD BASE */
-/* ------------------ */
-#carrouselr-container #carrouselr .card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  text-decoration: none;
-}
-
-/* Imagen */
-#carrouselr-container #carrouselr .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .4s ease;
-}
-
-/* Overlay */
-#carrouselr-container #carrouselr .card .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: white;
-  opacity: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transition: opacity .4s ease;
-}
-
-#carrouselr-container #carrouselr .card .title {
-  font-family: 'Bebas Neue', sans-serif;
-  /* Fuente similar a Netflix */
-  font-size: 2rem;
-  margin: 0;
-}
-
-#carrouselr-container #carrouselr .card .desc {
-  font-size: 1rem;
-  opacity: .8;
-  margin: 5px 0 0;
-}
-
-/* Hover Effects */
-#carrouselr-container #carrouselr .card:hover img {
-  transform: scale(1.15);
-}
-
-#carrouselr-container #carrouselr .card:hover .overlay {
-  opacity: 1;
-}
-
-@media (min-width: 980px)  {
-  #carrouselr-container {
-    overflow: hidden;
-  }
-}
-
-/* -------------------------- */
-:root {
-  --color-bg: #ffffff;
-  --color-primary: #0077ff;
-  --color-secondary: #222222;
-  --color-muted: #777777;
-  --border-radius: 0.6rem;
-}
-
-/* -------------------------- */
-/* 🧱 Bloque principal */
-/* -------------------------- */
-.comments {
-  padding: 2rem;
-  max-width: 100%;
-  max-height: 75vh;
-  overflow-y: auto;
-  margin: 0;
+html {
+  scroll-padding-top: 90px;
   scroll-behavior: smooth;
 }
 
-/* Título */
-.comments__title {
-  text-align: center;
-  margin-bottom: 1.5rem;
+body {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
 }
 
-/* Formulario */
-.comments__form {
-  /* display: flex; */
-  position: sticky;
-  top: 0;
-  /* background: var(--color-bg); */
-  z-index: 1;
-  padding-bottom: 1rem;
-  /* background-color: #c6c6c6; */
-
-  background: rgba(177, 177, 240, 0.836);
-  color: white;
-  /* flex-direction: column;
-  gap: 1rem; */
-}
-
-/* Textarea */
-.comments__textarea {
-  width: 100%;
-  min-height: 120px;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-muted);
-  resize: vertical;
-  font-size: 1rem;
-}
-
-/* Emoji Picker */
-.comments__emojiPicker {
+/* ----------------------------------------- */
+/* 2. Menús y logo */
+/* ----------------------------------------- */
+.header,
+.catalogo-hero__top,
+.contactanos-hero__top,
+.services-hero__top {
   position: relative;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.comments__emojiBtn {
-  background: var(--color-primary);
-  border: none;
-  padding: 0.6rem 1rem;
-  color: #fff;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 1.3rem;
-}
-
-.comments__emojiBtn:hover,
-.comments__emojiItem:hover {
-  transform: scale(1.1);
-}
-
-.comments__emojiList {
-  position: absolute;
-  top: 2.8rem;
+.header.grid-header {
   display: flex;
-  gap: 0.5rem;
-  background: var(--color-bg);
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-muted);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2vw;
 }
 
-.comments__emojiItem {
-  background: transparent;
-  font-size: 1.4rem;
-  border: none;
-  cursor: pointer;
+/* Ajuste del tamaño del logo */
+.header__logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
 }
 
-/* Botón enviar */
-.comments__submit {
-  background: rgb(0, 0, 255);
-  color: rgb(255, 255, 2);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: background 0.3s;
+.header__logo img:hover {
+  transform: scale(1.05);
 }
 
-.comments__submit:hover {
-  background: #005fd1;
+.main-nav,
+.header__nav {
+  position: relative;
+  z-index: 60;
 }
 
-/* Contador */
-.comments__counter {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-}
-
-/* Lista */
-.comments__list {
-  padding: 0;
-  margin-top: 2rem;
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.comments__item {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  animation: fadeIn 0.35s ease;
-}
-
-.main__carousel {
-  min-height: 75vh;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.header__nav a {
-  margin-left: 1rem;
-  text-decoration: none;    
+.nav__list a {
+  position: relative;
+  z-index: 70;
   cursor: pointer;
+  pointer-events: auto;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.header__nav a:hover {
-  color: rgba(14, 230, 111, 0.849);
+.nav__list a:hover {
+  color: var(--primary-color);
 }
 
-/* ACCORDION */
+/* ----------------------------------------- */
+/* 3. Títulos y tipografía                   */
+/* ----------------------------------------- */
+.titulo.principal {
+  text-align: center;
+}
+
+.header__title {
+  font-family: var(--font-main);
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+  color: #222;
+}
+
+/* ----------------------------------------- */
+/* 4. Agregué sección hero para mejorar portada        */
+/* ----------------------------------------- */
+.hero-bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 4rem 2vw;
+  margin-bottom: 3rem;
+  background-color: #fff;
+}
+
+.hero-bienvenida__text {
+  flex: 1 1 400px;
+}
+
+.hero-bienvenida__text h2 {
+  font-family: var(--font-main);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: #222;
+}
+
+.hero-bienvenida__image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-bienvenida__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------------------- */
+/* 5. Barra verde: Panel de productos. Se limpió menú repetido en html en el index       */
+/* ----------------------------------------- */
+.panel-header {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2vw;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.panel-header__titulo {
+  text-align: center;
+  color: #222;
+}
+
+.panel-header__titulo h2 {
+  font-family: var(--font-main);
+  font-size: 2.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.panel-header__titulo h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ----------------------------------------- */
+/* 6. Layout grid-body              */
+/* ----------------------------------------- */
+.grid-body--back {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 0 2vw 3rem 2vw;
+}
+
+@media (max-width: 768px) {
+  .grid-body--back {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------------------------- */
+/* 7. Acordeón de productos                  */
+/* ----------------------------------------- */
+.menu__list {
+  list-style: none;
+}
+
 .accordion {
+  background-color: #e9e9e9;
+  color: #333;
+  cursor: pointer;
+  padding: 1rem;
   width: 100%;
   text-align: left;
-  background: #ddd;
   border: none;
-  padding: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 5px;
 }
 
+.accordion.active, 
 .accordion:hover {
-  background: #bbb;
+  background-color: #d4d4d4;
 }
 
 .panel {
-  display: none;
   padding: 1rem;
-  background: #f1f1f1;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 0 4px 4px 0;
 }
 
-/* TABS */
+/* ----------------------------------------- */
+/* 8. Pestañas (Tabs) y galería              */
+/* ----------------------------------------- */
 .tabs {
   display: flex;
+  list-style: none;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
 }
 
 .tab {
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #ddd;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #666;
+  transition: color 0.3s;
 }
 
 .tab.active {
-  background: #333;
-  color: #fff;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .tab__content {
   display: none;
-  animation: fadeIn 0.5s ease;
+  animation: fadeEffect 0.5s;
 }
 
 .tab__content.active {
   display: block;
 }
 
-/* GALLERY */
+/* Soporte visual para la pestaña landing */
+.landing__section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.landing__section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.gallery img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-  .grid-body,
-  .grid-body--back {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-header {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+/* ----------------------------------------- */
+/* 9. Poner layout lado a lado (Noticias e info)   */
+/* ----------------------------------------- */
+.noticias-comentarios-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 2vw;
+  align-items: flex-start;
 }
 
-@media (max-width: 48rem) {
-  .grid-body {
-    grid-template-columns: 1fr;
-  }
-
-  .comments {
-    max-height: none;
-    overflow-y: visible;
-  }
+.noticias-comentarios-wrapper .main__carousel {
+  flex: 2 1 500px;
+  order: 1;
+  min-width: 0; 
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+.noticias-comentarios-wrapper .comments {
+  flex: 1 1 300px;
+  order: 2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.main__carousel h2,
+.comments__title {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+}
+
+/* ----------------------------------------- */
+/* 10. Carrusel y flechas                    */
+/* ----------------------------------------- */
+
+/* Contenedor principal */
+.carrouselr-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.carrouselr-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrousel {
+  flex: 0 0 100%; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+.carrousel .card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  height: 300px;
+}
+
+/* La imagen rellena el 100% del nuevo espacio sin deformarse al hacer clic */
+.carrousel__img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.5s;
+}
+
+/* Poner efecto de acercamiento al pasar el ratón */
+.carrousel .card:hover .carrousel__img {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Se hizo el degradado en el texto para no tapar la fotografía */
+.carrousel .overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+  color: #fff;
+  width: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+/* Ajuste de los textos para que no ocupen tanta altura */
+.carrousel .title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+/* =========================================
+ FLECHAS GRANDES Y POSICIONADAS
+ ========================================= */
+.carrouselr-container .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 2.5rem; /* Tamaño de la flecha */
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrouselr-container .btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carrouselr-container .btn--left { left: 10px; }
+.carrouselr-container .btn--right { right: 10px; }
+
+/* ----------------------------------------- */
+/* 11. Formulario de comentarios             */
+/* ----------------------------------------- */
+.comments__label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.comments__textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.comments__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.comments__emoji-picker {
+  position: relative;
+}
+
+.comments__emoji-list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  list-style: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comments__emoji-list[hidden] {
+  display: none;
+}
+
+.comments__emoji-btn,
+.comments__emoji-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.comments__emoji-item:hover {
+  transform: scale(1.2);
+}
+
+.comments__submit {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.comments__submit:hover {
+  background-color: #7a9c7c;
+}
+
+.comments__counter {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.comments__list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.comments__item {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/* ----------------------------------------- */
+/* 12. Lightbox y popups           */
 
 .lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
-  display: grid;
-  place-items: center;
-  z-index: 999;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .lightbox[hidden] {
@@ -485,96 +562,65 @@ body {
 }
 
 .lightbox__img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .lightbox__close {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 3rem;
-  color: white;
+  font-size: 2.5rem;
+  color: #fff;
   cursor: pointer;
+  font-weight: bold;
+  background: none;
+  border: none;
 }
 
 .lightbox__content {
   background: #fff;
-  padding: 20px;
-  max-width: 500px;
-  width: 90%;
-  position: relative;
+  padding: 2.5rem;
   border-radius: 8px;
-  text-align: center;
-}
-
-.lightbox__content picture img {
-  max-width: 100%;
-  height: auto;
-  margin: 15px 0;
-}
-
-
-/* ----------------------------------------- */
-/* 🌐 Landing sections */
-/* ----------------------------------------- */
-.tab__content--landing {
-  padding: 0;
-}
-
-/* Sección base */
-.landing__section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 40px;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Contenido */
-.landing__content {
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 25px;
-  border-radius: 6px;
+  text-align: center;
+  position: relative;
 }
 
-.landing__content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.lightbox__content img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 1.5rem 0;
 }
 
-.landing__content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+/* ----------------------------------------- */
+/* 13. Footer                                */
+/* ----------------------------------------- */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2vw;
+  margin-top: auto;
 }
 
-/* Sección 1 */
-.landing__section--one {
-  background-image: url('../images/escaners-ip.JPG');
+.social__list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 1.5rem 0;
 }
 
-/* Sección 2 */
-.landing__section--two {
-  background-image: url('../images/handHeld-ip.JPG');
+.social__list img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s;
 }
 
-.footer__social a {
-  margin-left: 1rem;
-  color: white;
-  font-size: smaller;
-    cursor: pointer;
-   border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.footer__social a:hover {
-    background-color: white;
-     transform: scale(3.05) rotate(95deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+.social__list a:hover img {
+  transform: translateY(-3px);
 }
 

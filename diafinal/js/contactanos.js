@@ -2,11 +2,24 @@
 /* ----------------------------------------- */
 /* 💾 contactanos FORM valida email */
 /* ----------------------------------------- */
-document.querySelector('.contact__form').addEventListener('submit', (e) => {
-  const email = document.getElementById('email').value;
 
-  if (!email.includes('@')) {
-    e.preventDefault();
-    alert('Por favor ingrese un correo válido');
+(() => {
+  'use strict';
+
+  // Guardar el selector principal en una constante
+  const contactForm = document.querySelector('.contact__form');
+
+  if (contactForm) {
+    
+      const emailInput = contactForm.querySelector('#email');
+
+      // Crear una función Handler 
+      const validateEmailHandler = (e) => {
+          if (emailInput && !emailInput.value.includes('@')) {
+              e.preventDefault();
+              alert('Por favor, ingrese un correo válido.');
+          }
+      };
+      contactForm.addEventListener('submit', validateEmailHandler);
   }
-});
+})();
