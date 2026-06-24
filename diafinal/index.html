@@ -1,283 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projecto Final</title>
+    <title>JOLU Grupo Digital - Proyecto Final - Inicio</title>
+    
+    <!-- METADATOS DE COMPARTICIÓN Y CONFIGURACIÓN SEO (OPEN GRAPH Y TWITTER CARDS) -->
+    <meta name="description" content="Portal corporativo en biometría y sitemas de seguridad.">
+    <meta property="og:title" content="JOLU Grupo Digital - Inicio">
+    <meta property="og:description" content="Portal corporativo en biometría y sitemas de seguridad.">
+    <meta property="og:image" content="images/banner.jpg">
+    <meta property="og:url" content="https://joludigitalgroup.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOLU Grupo Digital - Inicio">
+    <meta name="twitter:description" content="Portal corporativo en biometría y sitemas de seguridad.">
+    <meta name="twitter:image" content="images/banner.jpg">
+    <meta name="twitter:url" content="https://joludigitalgroup.com/">
+
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="images/favicons/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina principal Poryecto FInal lorem.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
+    
+    <!-- CABECERA PRINCIPAL: Navegación unificada y resolución de duplicidad jerárquica (Un solo h1 por documento) -->
+    <header class="header grid-header">
+        <div class="header__logo" aria-label="Logotipo del sitio">
+            <img src="images/favicons/logojolu.webp" alt="Logo empresa Jolu" loading="lazy">
+        </div>
+        <div class="titulo principal">
+            <h1 class="header__title">JOLU Grupo Digital</h1>
+            <h4>Portal corporativo en biometría y sistemas de seguridad</h4>
+        </div>
+        
+        <nav class="header__nav" aria-label="Menú principal">
+            <ul class="nav__list">
+                <li><a href="#inicio" title="Ir a la portada de inicio">Inicio</a></li>
+                <li><a href="#productos" title="Ir a la sección de productos">Productos</a></li>
+                <li><a href="#noticias" title="Ir a la sección de noticias">Noticias</a></li>
+                <li><a href="servicios.html" title="Ir a la página de servicios">Servicios</a></li>
+                <li><a href="catalogo.html" title="Ir a la página de catálogo">Catálogo</a></li>
+                <li><a href="contactanos.html" title="Ir a la página de contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- PARALLAX FRONT -->
-    <section class="parallax parallax--front">
-        <header class="header grid-header">
-            <div class="header__logo" aria-label="Logotipo del sitio">
-                <img src="images/favicons/favicon-32x32.png" alt="Logo empresa">
+    <main class="main">
+
+        <!-- SECCIÓN HERO O PORTADA: Con optimización de imágenes (los Formatos modernos que pidió) -->
+        <section id="inicio" class="hero-bienvenida">
+            <div class="hero-bienvenida__text">
+                <h2>Somos la empresa ecuatoriana que soluciona con tecnología los problemas de seguridad.</h2>
             </div>
-            <div class="titulo principal">
-                <h1 class="header__title">JOLU Grupo Digital</h1>
-                <h4>Portal Corporativo en Biometría y Sistemas de Seguridad</h4>
+            <div class="hero-bienvenida__image">
+                <picture>
+                    <source srcset="images/portadaseguridad.webp" type="image/webp">
+                    <img src="images/portadaseguridad.webp" alt="Bienvenida y seguridad tecnológica" loading="lazy">
+                </picture>
             </div>
-            <nav class="header__nav" aria-label="Menú principal">
-                <a href="#noticias" title="Abrir a la seccion Noticia">Noticias</a>
-                <a href="#comentarios" title="Abrir a seccion comentarios">Comentarios</a>
-                <a href="contactanos.html" title="Abrir a la pagina de contactenos">Contacto</a>
-            </nav>
-        </header>
+        </section>
 
-        <div class="main grid-body">
+        <!-- SECCIÓN DE PRODUCTOS: Panel interactivo estructurado con menús accesibles y acordioones -->
+        <section id="productos" class="seccion-productos">
+            
+            <div class="panel-header">
+                <div class="header__logo">
+                    <img src="images/favicons/logojolu.webp" alt="Logo empresa Jolu" loading="lazy">
+                </div>
+                <div class="panel-header__titulo">
+                    <h2>Panel de productos</h2>
+                    <h5>Proyectos - consultoría - servicios y temas de interés</h5>
+                </div>
+                <div style="width: 60px;"></div> 
+            </div>
+            
+            <div class="grid-body grid-body--back">
+                <aside class="aside__menu">
+                    <ul class="menu__list">
+                        <li>
+                            <button class="accordion" data-title="Escáneres tipo pistola" data-img="images/escaners-ip" data-text="Escáneres tipo pistola, inalámbricos, horizontales, verticales." title="Desplegar información de escáneres tipo pistola" aria-label="Desplegar escáneres">Escáneres tipo pistola</button>
+                            <div class="panel">Escáneres tipo pistola, inalámbricos, horizontales, verticales.</div>
+                        </li>
+                        <li>
+                            <button class="accordion" data-title="HandHeld" data-img="images/handHeld-ip" data-text="HandHeld e impresoras móviles." title="Desplegar información de dispositivos handheld" aria-label="Desplegar handhelds">HandHeld</button>
+                            <div class="panel">HandHeld e impresoras móviles.</div>
+                        </li>
+                        <li>
+                            <button class="accordion" data-title="POS de banco" data-img="images/posbanco-ip" data-text="Cajas de dinero, impresoras POS de banco y bancarias." title="Desplegar información de terminales POS de banco" aria-label="Desplegar POS de banco">POS de banco</button>
+                            <div class="panel">Cajas de dinero, impresoras POS de banco y bancarias, monitores de toque, todo en uno para puntos de venta.</div>
+                        </li>
+                    </ul>
+                </aside>
 
+                <section class="main__content">
+                    <ul class="tabs" role="tablist">
+                        <li role="presentation"><button class="tab active" data-tab="lightbox" title="Mostrar la galería en formato lightbox" aria-label="Activar pestaña lightbox" role="tab" aria-selected="true">Lightbox</button></li>
+                        <li role="presentation"><button class="tab" data-tab="landing" title="Mostrar información en formato de secciones landing" aria-label="Activar pestaña landing" role="tab" aria-selected="false">Landing</button></li>
+                    </ul>
+
+                    <div class="tab__content tab__content--lightbox active" role="tabpanel">
+                        <h2>Galería de productos</h2>
+                        <div class="gallery">
+                            <picture>
+                                <source srcset="images/camaras-1.webp" type="image/webp">
+                                <source srcset="images/camaras-1.jpg" type="image/jpeg">
+                                <img src="images/camaras-1.jpg" alt="Kit de cámaras de seguridad familiares" loading="lazy">
+                            </picture>
+                            <picture>
+                                <source srcset="images/camaras-2.webp" type="image/webp">
+                                <source srcset="images/camaras-2.jpg" type="image/jpeg">
+                                <img src="images/camaras-2.jpg" alt="Cámaras domo y accesorios de vigilancia" loading="lazy">
+                            </picture>
+                            <picture>
+                                <source srcset="images/camaras-3.webp" type="image/webp">
+                                <source srcset="images/camaras-3.jpg" type="image/jpeg">
+                                <img src="images/camaras-3.jpg" alt="Detección de dispositivos espías" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="tab__content tab__content--landing" role="tabpanel">
+                        <h2 class="visually-hidden" hidden>Sección de aterrizaje landing</h2>
+                        <picture>
+                            <source srcset="images/placeholder.webp" type="image/webp">
+                            <img src="images/placeholder.webp" alt="Imagen representativa de la sección landing" loading="lazy" style="width: 100%; border-radius: 8px;">
+                        </picture>
+                        <section class="landing__section landing__section--one">
+                            <h2>Sistemas de control integrados</h2>
+                            <p>Despliegue de tecnologías avanzadas para la supervisión y automatización perimetral de infraestructuras críticas y residenciales.</p>
+                        </section>
+                        <section class="landing__section landing__section--two">
+                            <h2>Consultoría especializada</h2>
+                            <p>Análisis de vulnerabilidades y diseño de protocolos a la medida para garantizar la continuidad de sus operaciones.</p>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- CONTENEDOR INTERACTIVO: Cambié el diseño viejo (que tenía fondos muy oscuros y pesados) 
+         por este formato de tarjetas limpias con bordes y sombras suaves. 
+         Lo hice para aplicar bien el Box Model del curso, mejorar los espacios y usar colores más ordenados. -->
+        <div class="noticias-comentarios-wrapper">
+            
             <section id="noticias" class="main__carousel">
-                <h2>Noticias Destacadas</h2>
-                <div id="carrouselr-container">
-                    <span onclick="carrouselRight()" class="btn"></span>
-                    <div id="carrouselr">
-                        <div class="carrousel">
-                            <a class="card"
-                                href="https://latam.kaspersky.com/resource-center/definitions/biometrics#:~:text=En%20la%20pr%C3%A1ctica%2C%20la%20seguridad,su%20uso%20en%20tiempo%20real."
-                                target="_blank" rel="noopener noreferrer" title="Abrir a Noticia a">
+                <h2>Noticias destacadas</h2>
+                <div class="carrouselr-container">
+                    
+                    <button class="btn btn--left" title="Desplazar a la noticia anterior" aria-label="Ver noticia anterior">&#10094;</button>
+                    
+                    <div class="carrouselr-list">
+                        <article class="carrousel">
+                            <a class="card" href="https://latam.kaspersky.com/resource-center/definitions/biometrics" target="_blank" rel="noopener noreferrer" title="Leer artículo de biometría en Kaspersky">
                                 <picture>
-                                    <source srcset="images/48-biometrics-q75.webp" type="image/webp">
-                                    <source srcset="images/48-biometrics-q75.jpg" type="image/jpeg">
-                                    <img src="./images/48-biometrics-q75.jpg" alt="Noticia destacada a" loading="lazy"
-                                        class="carrousel__img">
+                                    <source srcset="images/biometriafacial.webp" type="image/webp">
+                                    <img src="images/biometriafacial.webp" alt="Persona utilizando biometría facial en el móvil" loading="lazy" class="carrousel__img">
                                 </picture>
-
                                 <div class="overlay">
-                                    <h3 class="title">¿Qué es la biometría y cómo se utiliza en la seguridad? -
-                                        Kaspersky</h3>
-                                    <p class="desc">La biometría es cada vez más utilizada como una capa avanzada en
-                                        muchos sistemas de seguridad personales y empresariales.</p>
+                                    <h3 class="title">¿Qué es la biometría y cómo se utiliza en la seguridad?</h3>
+                                    <p class="desc">La biometría es cada vez más utilizada como una capa avanzada en muchos sistemas de seguridad personales y empresariales.</p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="carrousel">
-                            <a class="card"
-                                href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/#:~:text=Biometr%C3%ADa%20y%20privacidad:%20%C2%BFpuede%20haber,Durante%20cu%C3%A1nto%20tiempo%20se%20conservar%C3%A1n."
-                                target="_blank" rel="noopener noreferrer" title="Abrir a Noticia b">
+                        </article>
+                        
+                        <article class="carrousel">
+                            <a class="card" href="https://ecuador.unir.net/actualidad-unir/biometria-riesgos-vulnerabilidades/" target="_blank" rel="noopener noreferrer" title="Leer artículo sobre riesgos biométricos en UNIR">
                                 <picture>
                                     <source srcset="images/20-BLOG-OK.webp" type="image/webp">
                                     <source srcset="images/20-BLOG-OK.jpg" type="image/jpeg">
-                                    <img src="images/20-BLOG-OK.jpg" alt="Noticia destacada b" loading="lazy"
-                                        class="carrousel__img">
+                                    <img src="images/20-BLOG-OK.jpg" alt="Riesgos y vulnerabilidades de la biometría" loading="lazy" class="carrousel__img">
                                 </picture>
                                 <div class="overlay">
                                     <h3 class="title">Biometría: amenazas, riesgos y vulnerabilidades</h3>
-                                    <p class="desc">La biometría hace referencia a la identificación y autenticación de
-                                        personas a partir de características físicas o conductuales únicas, como huellas
-                                        dactilares, reconocimiento facial, iris o voz.</p>
+                                    <p class="desc">La biometría hace referencia a la identificación y autenticación de personas a partir de características físicas únicas.</p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="carrousel">
-                            <a class="card"
-                                href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety#:~:text=Viajes%20e%20inmigraci%C3%B3n:%20racionalizaci%C3%B3n%20de%20los%20procesos&text=El%20sector%20de%20viajes%20e,sean%20m%C3%A1s%20seguros%20y%20eficientes.&text=Aeropuertos%20y%20control%20fronterizo:%20Los,viajeros%20en%20los%20cruces%20fronterizos."
-                                target="_blank" rel="noopener noreferrer" title="Abrir a noticia c">
+                        </article>
+                        
+                        <article class="carrousel">
+                            <a class="card" href="https://www.aratek.co/es/news/biometric-security-the-future-of-personal-and-public-safety" target="_blank" rel="noopener noreferrer" title="Leer artículo sobre seguridad pública en Aratek">
                                 <picture>
                                     <source srcset="images/BiometricSecurity.webp" type="image/webp">
                                     <source srcset="images/BiometricSecurity.jpg" type="image/jpeg">
-                                    <img src="images/BiometricSecurity.jpg" alt="Noticia destacada c" loading="lazy"
-                                        class="carrousel__img">
+                                    <img src="images/BiometricSecurity.jpg" alt="Futuro de la seguridad pública y biométrica" loading="lazy" class="carrousel__img">
                                 </picture>
                                 <div class="overlay">
-                                    <h3 class="title">Seguridad biométrica: el futuro de la seguridad personal y pública
-                                    </h3>
-                                    <p class="desc">En una era en la que la seguridad digital es más crucial que nunca,
-                                        la seguridad biométrica surge como un faro de esperanza e innovación.</p>
+                                    <h3 class="title">Seguridad biométrica: el futuro de la seguridad personal y pública</h3>
+                                    <p class="desc">En una era en la que la seguridad digital es más crucial que nunca, la seguridad biométrica surge como esperanza.</p>
                                 </div>
                             </a>
-                        </div>
-
+                        </article>
                     </div>
-                    <span onclick="carrouselLeft()" class="btn"></span>
+                    
+                    <button class="btn btn--right" title="Desplazar a la noticia siguiente" aria-label="Ver noticia siguiente">&#10095;</button>
                 </div>
             </section>
 
             <section id="comentarios" class="comments">
-                <h2 class="comments__title">Comentarios Recientes</h2>
+                <h2>Comentarios recientes</h2>
 
-                <!-- Formulario de comentarios -->
                 <form class="comments__form" action="#" method="POST" enctype="multipart/form-data">
                     <label for="commentText" class="comments__label">Escribe tu comentario</label>
-
-                    <textarea id="commentText" name="commentText" class="comments__textarea" maxlength="200"
-                        required></textarea>
-
+                    <textarea id="commentText" name="commentText" class="comments__textarea" maxlength="200" autocomplete="off" required></textarea>
+                    
                     <div class="comments__controls">
-                        <!-- Selector de emojis -->
                         <div class="comments__emoji-picker" aria-label="Selector de emojis">
-                            <button type="button" class="comments__emoji-btn" title="Añadir emoji">
-                                😀
-                            </button>
-
-                            <div class="comments__emoji-list" hidden>
-                                <button type="button" class="comments__emoji-item">😀</button>
-                                <button type="button" class="comments__emoji-item">🔥</button>
-                                <button type="button" class="comments__emoji-item">💡</button>
-                                <button type="button" class="comments__emoji-item">😍</button>
-                                <button type="button" class="comments__emoji-item">👌</button>
-                                <button type="button" class="comments__emoji-item">💬</button>
-                            </div>
+                            <button type="button" class="comments__emoji-btn" title="Desplegar panel para añadir un emoji" aria-label="Abrir panel de emojis">😀</button>
+                            
+                            <ul class="comments__emoji-list" hidden>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de sonrisa" aria-label="Insertar sonrisa">😀</button></li>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de fuego" aria-label="Insertar fuego">🔥</button></li>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de idea" aria-label="Insertar idea">💡</button></li>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de enamorado" aria-label="Insertar enamorado">😍</button></li>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de perfecto" aria-label="Insertar perfecto">👌</button></li>
+                                <li><button type="button" class="comments__emoji-item" title="Insertar emoji de chat" aria-label="Insertar chat">💬</button></li>
+                            </ul>
                         </div>
-
-                        <button type="submit" class="comments__submit" title="Enviar comentario">
-                            Publicar
-                        </button>
+                        <button type="submit" class="comments__submit" title="Publicar el comentario escrito" aria-label="Enviar formulario de comentario">Publicar</button>
                     </div>
-
-                    <p class="comments__counter">
-                        <span id="charCount">0</span>/200 caracteres
-                    </p>
+                    <p class="comments__counter"><span id="charCount">0</span>/200 caracteres</p>
                 </form>
 
-                <!-- Lista dinámica -->
                 <ul class="comments__list" id="commentsList"></ul>
             </section>
+
         </div>
+    </main>
 
-        <footer class="footer grid-footer">
-            <div class="footer__copy">©JOLU Grupo Digital</div>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=61585944281677" aria-label="Facebook" target="_blank"
-                    rel="noopener noreferrer" title="Abrir a Facebook"><img
-                        src="images/face-favicon_io/favicon-32x32.png" alt="Facebook"></a>|
-                <a href="https://www.instagram.com/jolu_grupodigital/" aria-label="Instagram" target="_blank"
-                    rel="noopener noreferrer" title="Abrir a Instagram"><img
-                        src="images/insta_favicon_io/favicon-32x32.png" alt="Instagram"></a>
-            </div>
-            <div class="footer__msg">Gracias por tu visita</div>
-        </footer>
-    </section>
-
-    <!-- PARALLAX BACK -->
-    <section class="parallax parallax--back">
-        <header class="header grid-header">
-            <div class="header__logo"><img src="images/favicons/favicon-32x32.png" alt="Logo empresa"></div>
-            <div class="titulo principal">
-                <h1 class="header__title">Panel de Productos</h1>
-                <h5>Proyectos - Consultoría - Servicios y Temas de Interés</h5>
-            </div>
-            <nav class="header__nav">
-                <a href="index.html" title="Ir al inicio desde parallax">Inicio</a>
-                <a href="servicios.html" title="Ir a page servicios desde parallax">Servicios</a>
-                <a href="contactanos.html" title="Ir a page contactos desde parallax">Contacto</a>
-            </nav>
-        </header>
-
-        <div class="main grid-body grid-body--back">
-            <aside class="aside__menu">
-                <button class="accordion" data-title="Escáneres Tipo Pistola" data-img="images/escaners-ip"
-                    data-text="Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales.">Escáneres Tipo
-                    Pistola</button>
-                <div class="panel">Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales</div>
-                <button class="accordion" data-title="HandHeld" data-img="images/handHeld-ip"
-                    data-text="HandHeld e Impresoras Móviles.">HandHeld</button>
-                <div class="panel">HandHeld e Impresoras Móviles</div>
-                <button class="accordion" data-title="PosBanco" data-img="images/posbanco-ip"
-                    data-text="Cajas de Dinero, Impresoras POS de Banco y Bancarias.">POS de Banco</button>
-                <div class="panel">Cajas de Dinero, Impresoras POS de Banco y Bancarias, Monitores de Toque,
-                    Todo en uno para Puntos de Venta
-                </div>
-            </aside>
-
-            <section class="main__content">
-                <div class="tabs">
-                    <button class="tab active" data-tab="lightbox">Lightbox</button>
-                    <button class="tab" data-tab="landing">Landing</button>
-                </div>
-
-                <div class="tab__content tab__content--lightbox active">
-                    <h2>Galería de Productos</h2>
-                    <div class="gallery">
-                        <picture>
-                            <source srcset="images/camaras-1.webp" type="image/webp">
-                            <source srcset="images/camaras-1.JPG" type="image/jpeg">
-                            <img src="images/camaras-1.JPG" alt="Producto Camaras1" loading="lazy">
-                        </picture>
-
-                        <picture>
-                            <source srcset="images/camaras-2.webp" type="image/webp">
-                            <source srcset="images/camaras-2.JPG" type="image/jpeg">
-                            <img src="images/camaras-2.JPG" alt="Producto Camaras2" loading="lazy">
-                        </picture>
-
-                        <picture>
-                            <source srcset="images/camaras-3.webp" type="image/webp">
-                            <source srcset="images/camaras-3.JPG" type="image/jpeg">
-                            <img src="images/camaras-3.JPG" alt="Producto Camaras3" loading="lazy">
-                        </picture>
-                    </div>
-                </div>
-
-                <div class="tab__content tab__content--landing">
-                    <section class="landing__section landing__section--one">
-                      <!--   <div class="landing__content">
-                            <h2>Escáneres Tipo Pistola</h2>
-                            <p>
-                                Escáneres Tipo Pistola, Inalámbricos, Horizontales, Verticales.
-                            </p>
-                        </div> -->
-                    </section>
-
-                    <section class="landing__section landing__section--two">
-                   <!--      <div class="landing__content">
-                            <h2>HandHeld</h2>
-                            <p>
-                                HandHeld e Impresoras Móviles
-                            </p>
-                        </div> -->
-                    </section>
-                </div>
-            </section>
+    <!-- PIE DE PÁGINA:  (rel y target validados) -->
+    <footer class="footer grid-footer">
+        <div class="footer__copy">©JOLU Grupo Digital</div>
+        <div class="footer__social">
+            <ul class="social__list">
+                <li><a href="https://www.facebook.com/profile.php?id=61585944281677" aria-label="Ir a la página corporativa de Facebook" target="_blank" rel="noopener noreferrer" title="Abrir perfil de Facebook de la empresa"><img src="images/face-favicon_io/favicon-32x32.png" alt="Logo de Facebook" loading="lazy"></a></li>
+                <li><a href="https://www.instagram.com/jolu_grupodigital/" aria-label="Ir a la página corporativa de Instagram" target="_blank" rel="noopener noreferrer" title="Abrir perfil de Instagram de la empresa"><img src="images/insta_favicon_io/favicon-32x32.png" alt="Logo de Instagram" loading="lazy"></a></li>
+                <li><a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer" title="Abrir perfil institucional de TikTok" aria-label="Ir a la página corporativa de TikTok"><img src="images/tiktok-favicon_io/favicon-32x32.png" alt="Logo de Tiktok" loading="lazy"></a></li>
+                <li><a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" title="Abrir perfil corporativo de Twitter X" aria-label="Ir a la página de Twitter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Logo de Twitter" loading="lazy"></a></li>
+            </ul>
         </div>
+        <div class="footer__msg">Todos los derechos reservados</div>
+    </footer>
 
-        <footer class="footer grid-footer">
-            <div class="footer__copy">©JOLU Grupo Digital</div>
-            <div class="footer__social">
-                <a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png" alt="Tiktok"></a> | <a
-                    href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Twitter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Twitter"></a>
-            </div>
-            <div class="footer__msg">©2026 Todos los derechos reservados</div>
-        </footer>
-    </section>
-
-    <div id="lightbox" class="lightbox" hidden>
-        <span class="lightbox__close">&times;</span>
-        <img class="lightbox__img" src="images/placeholder.webp" alt="">
+    <!-- LIGHTBOX Y DIÁLOGOS DE CONTROL -->
+    <div class="lightbox lightbox-container" hidden>
+        <span class="lightbox__close" title="Cerrar visualización de imagen ampliada" aria-label="Cerrar imagen ampliada">&times;</span>
+        <img class="lightbox__img" src="images/placeholder.webp" alt="Imagen ampliada del producto" loading="lazy">
     </div>
 
-    <div id="aside-popup" class="lightbox" hidden>
-
+    <div class="lightbox aside-popup" hidden>
         <div class="lightbox__content" role="dialog" aria-modal="true">
-
-            <button class="lightbox__close" aria-label="Cerrar popup">✕</button>
-
+            <button class="lightbox__close" aria-label="Cerrar popup" title="Cerrar panel de detalle">✕</button>
             <h3 id="popupTitle">Producto</h3>
-
             <picture id="popupPicture">
                 <source srcset="images/producto.webp" type="image/webp">
-                <source srcset="images/producto.JPG" type="image/jpeg">
-                <img src="images/producto.JPG" alt="Producto relacionado">
+                <source srcset="images/producto.jpg" type="image/jpeg">
+                <img src="images/producto.jpg" alt="Detalle del producto seleccionado" loading="lazy">
             </picture>
-
-            <p id="popupText">
-                Información del producto seleccionado.
-            </p>
-
+            <p id="popupText">Información del producto seleccionado.</p>
         </div>
     </div>
 </body>
-
 </html>
