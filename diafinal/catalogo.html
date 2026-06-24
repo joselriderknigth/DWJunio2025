@@ -4,14 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projecto Final - Catalogo</title>
+    <title>Proyecto final - Catálogo</title>
+
+    <meta name="description" content="Catálogo de productos de JOLU Grupo Digital.">
+    <meta property="og:title" content="JOLU Grupo Digital - Catálogo">
+    <meta property="og:description" content="Catálogo de productos de JOLU Grupo Digital.">
+    <meta property="og:image" content="images/banner-catalogo.jpg">
+    <meta property="og:url" content="https://joludigitalgroup.com/catalogo.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOLU Grupo Digital - Catálogo">
+    <meta name="twitter:description" content="Catálogo de productos de JOLU Grupo Digital.">
+    <meta name="twitter:image" content="images/banner-catalogo.jpg">
+    <meta name="twitter:url" content="https://joludigitalgroup.com/catalogo.html">
+
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="images/favicons/site.webmanifest">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de Catalogos.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/catalogo.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -23,61 +39,62 @@
         <picture class="catalogo-hero__bg">
             <source srcset="images/banner-catalogo.webp" type="image/webp">
             <source srcset="images/banner-catalogo.jpg" type="image/jpeg">
-            <img src="images/banner-catalogo.JPG" alt="banner catalogo" loading="lazy">
+            <img src="images/banner-catalogo.jpg" alt="Banner del catálogo de productos" loading="lazy">
         </picture>
         <div class="catalogo-hero__overlay">
             <div class="catalogo-hero__top">
                 <div class="header__logo" aria-label="Logotipo del sitio">
-                    <a href="index.html" class="logo" title="retorna a page inicial desde logo"><img
-                            src="images/favicons/favicon-32x32.png" alt="Logo empresa"></a>
+                    <a href="index.html" class="logo" title="Retorna a página inicial desde logo"><img
+                            src="images/favicons/logojolu.webp" alt="Logo de la empresa" loading="lazy"></a>
                 </div>
 
-                <nav class="main-nav">
-                    <a href="index.html" title="retorna a page inicial desde menu">Inicio</a>
-                    <a href="servicios.html" title="abre a servicios desde menu page inicial">Servicios</a>
-                    <a href="catalogo.html" title="Visitar la página de Catalogo">Catálogo</a>
-                    <a href="soporte.html" title="Visitar la página de Soporte">Soporte</a>
-                    <a href="contactanos.html" title="abre a contactanos desde menu page inicial">Contáctenos</a>
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul class="nav__list">
+                        <li><a href="index.html" title="Retorna a página inicial desde menú">Inicio</a></li>
+                        <li><a href="servicios.html" title="Abre a servicios desde menú">Servicios</a></li>
+                        <li><a href="catalogo.html" title="Visitar la página de catálogo">Catálogo</a></li>
+                        <li><a href="soporte.html" title="Visitar la página de soporte">Soporte</a></li>
+                        <li><a href="contactanos.html" title="Abre a contáctanos desde menú">Contáctenos</a></li>
+                    </ul>
                 </nav>
             </div>
 
-            <h1 class="catalogo-hero__title">Catalogo de Productos</h1>
+            <h1 class="catalogo-hero__title">Catálogo de productos</h1>
         </div>
     </header>
 
     <main>
 
-
         <!-- ================= SECCIÓN 2 ================= -->
         <section class="catalogo-section">
+            <h2 class="visually-hidden" hidden>Presentación de catálogo</h2>
             <div class="catalogo-grid catalogo-grid--reverse">
 
                 <!-- catalogo CARD VIDEO -->
                 <div class="catalogo-card catalogo-card--video">
-                    <section class="video-section">
+                    <div class="video-section">
                         <video class="video-demo" autoplay muted loop controls preload="none"
-                            poster="images/catalogoposter.webp"
-                            aria-label="Video demostrativo del catalogo de productos">
+                            poster="images/catalogoposter.jpg"
+                            aria-label="Video demostrativo del catálogo de productos">
 
                             <source src="videos/catalogo.webm" type="video/webm">
                             <source src="videos/catalogo.mp4" type="video/mp4">
 
                         </video>
-                    </section>
-
+                    </div>
                 </div>
 
                 <!-- catalogo FORM INFO -->
                 <div class="catalogo-card--info">
                     <article class="catalogo-card catalogo-card--info">
-                        <h2>Nuestros Productos</h2>
+                        <h2>Nuestros productos</h2>
 
                         <p class="service-card__description">
                             Encuentra el equipamiento ideal para tu empresa. Todos nuestros productos cuentan con garantía, soporte y opciones de instalación por técnicos certificados.
                         </p>
 
-                        <h3>Otros Sistemas y Subprocesos de Consultoría:</h3>
-                        <h4>Sistemas avanzados de reconocimiento facial para una autenticación Segura y sin contacto</h4>
+                        <h3>Otros sistemas y subprocesos de consultoría:</h3>
+                        <h4>Sistemas avanzados de reconocimiento facial para una autenticación segura y sin contacto</h4>
 
                         <ul class="features features--one-col">
                             <li><strong>Verificación facial y rasgos</strong></li>
@@ -91,8 +108,6 @@
             </div>
         </section>
 
-
-
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -105,8 +120,8 @@
                 <p>Si tienes alguna pregunta o necesitas ayuda en algo siente libre de conectar a nuestro equipo.</p>
 
                 <a href="mailto:joseluiskid007@gmail.com" class="footer__email" target="_blank"
-                    rel="noopener noreferrer" title="abre a enviar correo de contacto del footer">
-                    <img src="images/email_favicon_io/favicon-16x16.png" alt="sent emal">joseluiskid007@gmail.com
+                    rel="noopener noreferrer" title="Enviar correo de contacto" aria-label="Enviar correo electrónico">
+                    <img src="images/email_favicon_io/favicon-16x16.png" alt="Icono de email" loading="lazy">joseluiskid007@gmail.com
                 </a>
 
                 <address>
@@ -116,18 +131,19 @@
             </div>
 
             <div class="footer__social">
-                <a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                    title="Abrir a Twiter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Twitter"></a>
-                <a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Instagram" aria-label="Instagram"><img
-                        src="images/insta_favicon_io/favicon-32x32.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
-                    rel="noopener noreferrer" title="Abrir a Facebook" aria-label="Facebook"><img
-                        src="images/face-favicon_io/favicon-32x32.png" alt="Facebook"></a>
-                <a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Tiktok" aria-label="Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
-                        alt="Tiktok"></a>
-
+                <ul class="social__list">
+                    <li><a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" aria-label="Ir a Twitter"
+                        title="Abrir Twitter X"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Logo de Twitter" loading="lazy"></a></li>
+                    <li><a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
+                        title="Abrir Instagram" aria-label="Ir a Instagram"><img
+                            src="images/insta_favicon_io/favicon-32x32.png" alt="Logo de Instagram" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
+                        rel="noopener noreferrer" title="Abrir Facebook" aria-label="Ir a Facebook"><img
+                            src="images/face-favicon_io/favicon-32x32.png" alt="Logo de Facebook" loading="lazy"></a></li>
+                    <li><a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
+                        title="Abrir Tiktok" aria-label="Ir a Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
+                            alt="Logo de Tiktok" loading="lazy"></a></li>
+                </ul>
             </div>
 
         </div>

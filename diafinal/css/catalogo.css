@@ -53,8 +53,8 @@ body {
   align-items: center;
   position: absolute;
   top: 15px;
-  left: 15px;
-  right: 15px;
+  width: 95%;
+  left: 2.5%;
 }
 
 .header__logo {
@@ -62,7 +62,9 @@ body {
 }
 
 .logo img {
-  max-width: 13rem;
+  width: 10vw;
+  max-width: 400px;
+  height: auto;
 }
 
 .main-nav a {
@@ -95,12 +97,12 @@ body {
   max-width: var(--max-width);
   margin: auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 2fr 1fr;
   gap: var(--space-lg);
 }
 
 .catalogo-grid--reverse {
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1.8fr 1fr;
 }
 
 /* ================= videos ================= */
@@ -119,7 +121,7 @@ body {
 }
 
 .video-section {
-  max-width: 900px;
+  max-width: 100%;
   margin: 3rem auto;
   padding: 1rem;
 }
@@ -174,7 +176,7 @@ body {
 
 .footer__info h3 {
   font-family: "Times New Roman", serif;
-  font-size: smaller;
+  font-size: 1.5rem;
 }
 .footer__info p {
  font-size: smaller;
@@ -233,3 +235,37 @@ body {
     text-align: left;
   }
 }
+/* =========================================
+   FIX: MENÚS SIEMPRE AL FRENTE Y CLICKEABLES
+   (Aplicación de Position - Día 12)
+   ========================================= */
+   .header,
+   .catalogo-hero__top,
+   .contactanos-hero__top,
+   .services-hero__top {
+       position: relative;
+       z-index: 50;
+   }
+   
+   .main-nav,
+   .header__nav {
+       position: relative;
+       z-index: 60;
+   }
+   
+   .nav__list {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       gap: 1.5rem;
+       list-style: none;
+       margin: 0;
+       padding: 0;
+   }
+   
+   .nav__list a {
+       position: relative;
+       z-index: 70;
+       cursor: pointer;
+       pointer-events: auto;
+   }

@@ -4,42 +4,60 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projecto Final - Servicios</title>
+    <title>Proyecto final - Servicios</title>
+
+    <meta name="description" content="Servicios de vigilancia y seguridad de JOLU Grupo Digital.">
+    <meta property="og:title" content="JOLU Grupo Digital - Servicios">
+    <meta property="og:description" content="Servicios de vigilancia y seguridad de JOLU Grupo Digital.">
+    <meta property="og:image" content="images/banner.jpg">
+    <meta property="og:url" content="https://joludigitalgroup.com/servicios.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOLU Grupo Digital - Servicios">
+    <meta name="twitter:description" content="Servicios de vigilancia y seguridad de JOLU Grupo Digital.">
+    <meta name="twitter:image" content="images/banner.jpg">
+    <meta name="twitter:url" content="https://joludigitalgroup.com/servicios.html">
+
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="images/favicons/site.webmanifest">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina de Servicios.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/servicios.css">
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
-
-    <!-- ================= HEADER / BANNER ================= -->
+ <!-- ================= HEADER / BANNER ================= -->
+    
     <header class="services-hero">
         <picture class="services-hero__bg">
             <source srcset="images/banner.webp" type="image/webp">
             <source srcset="images/banner.jpg" type="image/jpeg">
-            <img src="images/banner.JPG" alt="banner servicios" loading="lazy">
+            <img src="images/banner.jpg" alt="Banner de la sección servicios" loading="lazy">
         </picture>
 
         <div class="services-hero__overlay">
 
             <div class="services-hero__top">
                 <div class="header__logo" aria-label="Logotipo del sitio">
-                    <a href="index.html" class="logo" title="Volver la página de inicio"><img
-                            src="images/favicons/favicon-32x32.png" alt="Logo empresa"></a>
+                    <a href="index.html" class="logo" title="Volver a la página de inicio corporativa"><img
+                            src="images/favicons/logojolu.webp" alt="Logo de la empresa" loading="lazy"></a>
                 </div>
 
-                <nav class="main-nav">
-                    <a href="index.html" title="Volver la página de inicio">Inicio</a>
-                    <a href="servicios.html" title="Visitar la página de servicio">Servicios</a>
-                    <a href="catalogo.html" title="Visitar la página de Catalogo">Catálogo</a>
-                    <a href="soporte.html" title="Visitar la página de Soporte">Soporte</a>
-                    <a href="contactanos.html" title="Visitar la página de contactanos">Contáctenos</a>
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul class="nav__list">
+                        <li><a href="index.html" title="Volver a la página de inicio">Inicio</a></li>
+                        <li><a href="servicios.html" title="Visitar la página activa de servicio">Servicios</a></li>
+                        <li><a href="catalogo.html" title="Visitar la página de catálogo">Catálogo</a></li>
+                        <li><a href="soporte.html" title="Visitar la página de soporte">Soporte</a></li>
+                        <li><a href="contactanos.html" title="Visitar la página de contáctanos">Contáctenos</a></li>
+                    </ul>
                 </nav>
             </div>
 
@@ -48,18 +66,17 @@
     </header>
 
     <main>
-
         <!-- ================= SECCIÓN 1 ================= -->
+
         <section class="services-section">
             <div class="services-grid">
 
-                <!-- CARD INFO -->
                 <article class="service-card service-card--info">
-                    <h2>Vigilancia Electrónica</h2>
+                    <h2>Vigilancia electrónica</h2>
 
                     <p class="service-card__description service-card__description--line">
                         Soluciones de monitoreo visual diseñadas para brindar seguridad continua en hogares, negocios y
-                        espacios industriales. Instalamos sistemas de cámaras con optima cobertura, asegurando una
+                        espacios industriales. Instalamos sistemas de cámaras con óptima cobertura, asegurando una
                         operación eficiente y confiable.
                     </p>
 
@@ -73,12 +90,11 @@
                     </ul>
                 </article>
 
-                <!-- CARD IMAGEN -->
                 <div class="service-card service-card--imaget">
                       <picture class="service-card__bg">
                         <source srcset="images/servicio1.webp" type="image/webp">
                         <source srcset="images/servicio1.jpg" type="image/jpeg">
-                        <img src="images/servicio1.JPG" alt="banner service sup" loading="lazy">
+                        <img src="images/servicio1.jpg" alt="Instalación de cámara de vigilancia" loading="lazy">
                     </picture>
                 </div>
 
@@ -86,21 +102,23 @@
         </section>
 
         <!-- ================= SECCIÓN 2 ================= -->
+
         <section class="services-section">
             <div class="services-grid services-grid--reverse">
 
-                <!-- CARD IMAGEN -->
+                   <!-- CARD IMAGEN -->
+
                 <div class="service-card service-card--imaget">
                      <picture class="service-card__bg">
                         <source srcset="images/servicio2.webp" type="image/webp">
                         <source srcset="images/servicio2.jpg" type="image/jpeg">
-                        <img src="images/servicio2.JPG" alt="banner service dow" loading="lazy">
+                        <img src="images/servicio2.jpg" alt="Gestión de control de accesos" loading="lazy">
                     </picture>
                 </div>
 
                 <!-- CARD INFO -->
                 <article class="service-card service-card--info">
-                    <h2>Control y Gestión</h2>
+                    <h2>Control y gestión</h2>
 
                     <p class="service-card__description">
                         Tecnologías modernas para gestionar y controlar accesos en hogares, oficinas o instalaciones
@@ -126,11 +144,11 @@
 
             <div class="equipment-banner__content">
                 <div class="equipment-banner__text-left">
-                    <h2>Equipamiento Táctico</h2>
+                    <h2>Equipamiento táctico</h2>
                 </div>
 
                 <div class="equipment-banner__text-right">
-                    <p>Dotamos a personal operative, empresas de seguridad y organismos autorizados con equipamiento
+                    <p>Dotamos a personal operativo, empresas de seguridad y organismos autorizados con equipamiento
                         táctico profesional. Contamos con productos certificados para desempeño en campo, misiones de
                         vigilancia y operaciones especiales.</p>
                 </div>
@@ -140,7 +158,7 @@
                 <picture>
                         <source srcset="images/equipamiento.webp" type="image/webp">
                         <source srcset="images/equipamiento.png" type="image/png">
-                <img src="images/equipamiento.png" alt="Equipamiento táctico" loading="lazy">
+                <img src="images/equipamiento.png" alt="Muestra de equipamiento táctico profesional" loading="lazy">
                 </picture>
             </div>
 
@@ -157,8 +175,8 @@
                 <h3>Contáctenos</h3>
                 <p>Si tienes alguna pregunta o necesitas ayuda en algo siente libre de conectar a nuestro equipo.</p>
 
-                <a href="mailto:joseluiskid007@gmail.com" class="footer__email">
-                    <img src="images/email_favicon_io/favicon-16x16.png" alt="sent emal">joseluiskid007@gmail.com
+                <a href="mailto:joseluiskid007@gmail.com" class="footer__email" aria-label="Enviar correo electrónico directo corporativo">
+                    <img src="images/email_favicon_io/favicon-16x16.png" alt="Icono de email" loading="lazy">joseluiskid007@gmail.com
                 </a>
 
                 <address>
@@ -168,18 +186,19 @@
             </div>
 
             <div class="footer__social">
-                <a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" title="Abrir a Twiter X"
-                    aria-label="Twitter"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Twitter"></a>
-                <a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Instagram" aria-label="Instagram"><img
-                        src="images/insta_favicon_io/favicon-32x32.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
-                    rel="noopener noreferrer" title="Abrir a Facebook" aria-label="Facebook"><img
-                        src="images/face-favicon_io/favicon-32x32.png" alt="Facebook"></a>
-                <a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
-                    title="Abrir a Tiktok" aria-label="Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
-                        alt="Tiktok"></a>
-
+                <ul class="social__list">
+                    <li><a href="https://x.com/joluknigth" target="_blank" rel="noopener noreferrer" title="Abrir canal corporativo Twitter X"
+                        aria-label="Ir a perfil de Twitter"><img src="images/tw-favicon_io/favicon-32x32.png" alt="Logo de Twitter" loading="lazy"></a></li>
+                    <li><a href="https://www.instagram.com/jolu_grupodigital/" target="_blank" rel="noopener noreferrer"
+                        title="Abrir canal corporativo Instagram" aria-label="Ir a perfil de Instagram"><img
+                            src="images/insta_favicon_io/favicon-32x32.png" alt="Logo de Instagram" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61585944281677" target="_blank"
+                        rel="noopener noreferrer" title="Abrir canal corporativo Facebook" aria-label="Ir a perfil de Facebook"><img
+                            src="images/face-favicon_io/favicon-32x32.png" alt="Logo de Facebook" loading="lazy"></a></li>
+                    <li><a href="https://www.tiktok.com/@grupodigital_jl?lang=es-419" target="_blank" rel="noopener noreferrer"
+                        title="Abrir canal corporativo Tiktok" aria-label="Ir a perfil de Tiktok"><img src="images/tiktok-favicon_io/favicon-32x32.png"
+                            alt="Logo de Tiktok" loading="lazy"></a></li>
+                </ul>
             </div>
 
         </div>
@@ -193,3 +212,4 @@
 </body>
 
 </html>
+
