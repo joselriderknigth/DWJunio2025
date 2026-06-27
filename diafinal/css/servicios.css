@@ -19,9 +19,9 @@ body {
   line-height: 1.6;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (DESKTOP ORIGINAL) ================= */
 .services-hero {
-  min-height: 15rem;
+  min-height: 22rem; /* OJO ESto mantiene la altura original aprobada para escritorio */
   color: white;
   position: relative;
   overflow: hidden;
@@ -31,9 +31,10 @@ body {
   background: rgba(0,0,0,0.4);
   height: 100%;
   padding: var(--space-md);
-   position: relative;
+  position: relative;
   z-index: 1;
 }
+
 .services-hero__bg {
   position: absolute;
   inset: 0;
@@ -50,18 +51,38 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-   position: absolute;
+  position: absolute;
   top: 15px;
   left: 15px;
   right: 15px;
 }
 
 .header__logo {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .logo img {
   max-width: 13rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav a {
@@ -69,7 +90,9 @@ body {
   text-decoration: none;
   color: white;
   font-family: Arial, sans-serif;
+  font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .main-nav a:hover {
@@ -80,7 +103,7 @@ body {
   text-align: center;
   margin-top: 6rem;
   font-size: clamp(2.5rem, 5vw, 4rem);
-   position: relative;
+  position: relative;
   z-index: 2;
 }
 
@@ -98,8 +121,7 @@ body {
   gap: var(--space-lg);
 }
 
-
-/* ================= CARDS ================= */
+/* ================= CARDS (DESKTOP ORIGINAL) ================= */
 .service-card {
   padding: var(--space-md);
   min-height: 22rem;
@@ -123,7 +145,7 @@ body {
   object-fit: cover;
 }
 
-.services-grid--reverse{
+.services-grid--reverse {
   grid-template-columns: 3.8fr 2.7fr;
 }
 
@@ -169,7 +191,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: var(--space-sm);
-  color:white;
+  color: white;
 }
 
 .equipment-banner__image img {
@@ -190,41 +212,33 @@ body {
   font-family: "Times New Roman", serif;
   font-size: 1.5rem;
 }
-.footer__info p {
- font-size: smaller;
-}
-.footer__info address {
- font-size: smaller;
+
+.footer__info p, .footer__info address {
+  font-size: smaller;
 }
 
 .footer__email {
-  font-family: "Comic Sans MS", cursive;
+  font-family: Arial, sans-serif;
   color: rgb(101, 181, 48);
   display: inline-block;
   margin: 0.5rem 0;
-  font-size: x-large;
-    cursor: pointer;
-  transition: background 0.3s;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
-.footer__email:hover {
-  font-size:xx-large;
+.footer__social, .footer__social ul, .footer__social li {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
 }
 
 .footer__social a {
   margin-left: 1rem;
   color: white;
   font-size: smaller;
-    cursor: pointer;
-   border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.footer__social a:hover {
-    background-color: white;
-     transform: scale(3.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .footer__copyright {
@@ -235,7 +249,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE INTERMEDIO ================= */
 @media (max-width: 900px) {
   .services-grid,
   .services-grid--reverse {
@@ -247,36 +261,119 @@ body {
     text-align: left;
   }
 }
+
 /* =========================================
    MENÚS SIEMPRE AL FRENTE Y CLICKEABLES
    ========================================= */
-   header,
-   catalogo-hero__top,
-   contactanos-hero__top,
-   services-hero__top {
-       position: relative;
-       z-index: 50;
-   }
-   
-   .main-nav,
-   .header__nav {
-       position: relative;
-       z-index: 60;
-   }
-   
-   .nav__list {
-       display: flex;
-       flex-wrap: wrap;
-       align-items: center;
-       gap: 1.5rem;
-       list-style: none;
-       margin: 0;
-       padding: 0;
-   }
-   
-   .nav__list a {
-       position: relative;
-       z-index: 70;
-       cursor: pointer;
-       pointer-events: auto;
-   }
+header,
+.catalogo-hero__top,
+.contactanos-hero__top,
+.services-hero__top {
+  position: relative;
+  z-index: 50;
+}
+
+.main-nav,
+.header__nav {
+  position: relative;
+  z-index: 60;
+}
+
+/* =========================================
+   REAJUSTE RESPONSIVO MÓVIL CRÍTICO (SÓLO MÓVIL)
+   ========================================= */
+@media (max-width: 768px) {
+  /* Se debió reducir la altura del banner superior sólo en celulares */
+  .services-hero {
+    min-height: 14rem;
+  }
+
+  .services-hero__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;    /* Para saltar de línea limpiamente si no cabe */
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    width: 100%;
+    list-style: none; /* para eliminar los puntos en móviles */
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    list-style: none;
+  }
+
+  .main-nav a {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .services-hero__title {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .services-section {
+    padding: 1.5rem var(--space-sm);
+  }
+
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* REVERSA  para poner Texto arriba, foto abajo en las fotitos */
+  .services-grid--reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  /* REDUCCIÓN PROPORCIONAL DE FOTOS */
+  .service-card--imaget {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .services-card__bg {
+    position: relative; /* Cambia a relativo para mejor no forzar el tamaño absoluto */
+    width: 100%;
+    height: auto;
+  }
+
+  .services-card__bg img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain; 
+    border-radius: 8px;
+  }
+
+  /* Adaptación del pie de página */
+  .footer__main {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+}

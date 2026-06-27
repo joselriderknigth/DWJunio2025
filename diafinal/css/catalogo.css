@@ -19,9 +19,9 @@ body {
   line-height: 1.6;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (DESKTOP ORIGINAL) ================= */
 .catalogo-hero {
-  min-height: 15rem;
+  min-height: 22rem; 
   color: white;
   position: relative;
   overflow: hidden;
@@ -58,13 +58,31 @@ body {
 }
 
 .header__logo {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .logo img {
-  width: 10vw;
-  max-width: 400px;
-  height: auto;
+  max-width: 13rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none; /* Elimina los puntos */
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav a {
@@ -72,7 +90,9 @@ body {
   text-decoration: none;
   color: white;
   font-family: Arial, sans-serif;
+  font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .main-nav a:hover {
@@ -105,7 +125,7 @@ body {
   grid-template-columns: 1.8fr 1fr;
 }
 
-/* ================= videos ================= */
+/* ================= VIDEOS ================= */
 .catalogo-card {
   padding: var(--space-md);
 }
@@ -132,7 +152,6 @@ body {
   background-color: #000;
 }
 
-
 .catalogo-card--info h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -146,7 +165,6 @@ body {
   padding-left: 1rem;
   border-left: 4px solid #ccc;
 }
-
 
 /* ================= FEATURES ================= */
 .features {
@@ -178,41 +196,33 @@ body {
   font-family: "Times New Roman", serif;
   font-size: 1.5rem;
 }
-.footer__info p {
- font-size: smaller;
-}
-.footer__info address {
- font-size: smaller;
+
+.footer__info p, .footer__info address {
+  font-size: smaller;
 }
 
 .footer__email {
-  font-family: "Comic Sans MS", cursive;
+  font-family: Arial, sans-serif;
   color: rgb(101, 181, 48);
   display: inline-block;
   margin: 0.5rem 0;
-  font-size: x-large;
-    cursor: pointer;
-  transition: background 0.3s;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
-.footer__email:hover {
-  font-size:xx-large;
+.footer__social, .footer__social ul, .footer__social li {
+  list-style: none; /* Limpieza nativa de viñetas */
+  padding: 0;
+  margin: 0;
 }
 
 .footer__social a {
   margin-left: 1rem;
   color: white;
   font-size: smaller;
-    cursor: pointer;
-   border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.footer__social a:hover {
-    background-color: white;
-     transform: scale(3.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .footer__copyright {
@@ -223,49 +233,149 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE INTERMEDIO ================= */
 @media (max-width: 900px) {
-  .services-grid,
-  .services-grid--reverse {
+  .catalogo-grid,
+  .catalogo-grid--reverse {
     grid-template-columns: 1fr;
   }
+}
 
-  .equipment-banner__content {
+/* =========================================
+   MENÚS SIEMPRE AL FRENTE Y CLICKEABLES
+   ========================================= */
+header,
+.catalogo-hero__top,
+.contactanos-hero__top,
+.services-hero__top {
+  position: relative;
+  z-index: 50;
+}
+
+.main-nav,
+.header__nav {
+  position: relative;
+  z-index: 60;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list a {
+  position: relative;
+  z-index: 70;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* =========================================
+   REAJUSTE RESPONSIVO solo para celulares
+   ========================================= */
+@media (max-width: 768px) {
+  .catalogo-hero {
+    min-height: 14rem;
+  }
+
+  .catalogo-hero__top {
+    position: relative;
+    display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  /* MENÚ HORIZONTAL RESPONSIVO EN CELULARES */
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    list-style: none;
+  }
+
+  .main-nav a {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .catalogo-hero__title {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .catalogo-section {
+    padding: 1.5rem var(--space-sm);
+  }
+
+  .catalogo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* hacer que el video quede abajo del texto en el móvil */
+  .catalogo-grid--reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  /* Se adaptó la proporción  del contenedor de video */
+  .catalogo-card--video {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .video-section {
+    width: 100%; 
+    margin: 1rem 0;
+    padding: 0;
+  }
+
+  .video-demo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* aqui los contenidos informativos */
+  .catalogo-card--info {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Se hizo la adaptación del pie de página */
+  .footer__main {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
   }
 }
-/* =========================================
-   FIX: MENÚS SIEMPRE AL FRENTE Y CLICKEABLES
-   (Aplicación de Position - Día 12)
-   ========================================= */
-   .header,
-   .catalogo-hero__top,
-   .contactanos-hero__top,
-   .services-hero__top {
-       position: relative;
-       z-index: 50;
-   }
-   
-   .main-nav,
-   .header__nav {
-       position: relative;
-       z-index: 60;
-   }
-   
-   .nav__list {
-       display: flex;
-       flex-wrap: wrap;
-       align-items: center;
-       gap: 1.5rem;
-       list-style: none;
-       margin: 0;
-       padding: 0;
-   }
-   
-   .nav__list a {
-       position: relative;
-       z-index: 70;
-       cursor: pointer;
-       pointer-events: auto;
-   }

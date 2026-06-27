@@ -386,7 +386,6 @@ body {
   height: 300px;
 }
 
-/* La imagen rellena el 100% del nuevo espacio sin deformarse al hacer clic */
 .carrousel__img {
   width: 100%;
   height: 100%; 
@@ -624,3 +623,81 @@ body {
   transform: translateY(-3px);
 }
 
+/* =========================================
+   REAJUSTE  PARA MEJORAR EL RESPONSIVO MÓVIL (INDEX)
+   ========================================= */
+@media (max-width: 768px) {
+  .grid-body--back {
+      grid-template-columns: 1fr;
+  }
+
+  /* PARA Centrar logo, títulos y estructurar la cabecera en móviles */
+  .header.grid-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .header__logo img {
+    width: 140px;
+    margin-bottom: 1rem;
+  }
+
+  /* Paraa alinear el menú de forma horizontal y distribuida en móviles */
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .nav__list a {
+    font-family: var(--font-text); /* Con esto unificamos la tipografía */
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  /* ESto permite que las noticias y comentarios se apilen verticalmente */
+  .noticias-comentarios-wrapper {
+    flex-direction: column;
+    padding: 1rem 4vw;
+  }
+
+  .noticias-comentarios-wrapper .main__carousel,
+  .noticias-comentarios-wrapper .comments {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  /* Se ajustaron las flechas del carrusel para que no tapen todo el contenido */
+  .carrouselr-container .btn {
+    font-size: 1.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  /* Asegurar que la imagen del lightbox sea responsiva y quepa en el celular */
+  .lightbox__img {
+    max-width: 85vw;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  .lightbox__content {
+    width: 90%;
+    padding: 1.5rem;
+    margin: auto;
+  }
+
+  .lightbox__content img {
+    max-width: 100%;
+    height: auto;
+  }
+}
